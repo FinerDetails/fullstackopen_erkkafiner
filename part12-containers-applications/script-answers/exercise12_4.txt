@@ -1,0 +1,857 @@
+Script started on Sat Sep 14 19:34:06 2024
+[?1034hsh-3.2# docker run -[K[K[K[K[Kstart -i hungry_brahmagupta
+[?2004h]0;root@e6e0ca278c63: /root@e6e0ca278c63:/# [7mcurl -sL https://deb.nodesource.com/setup_20.x | bash[27m
+[7mapt install -y nodejs[27m[Acurl -sL https://deb.nodesource.com/setup_20.x | bash
+apt install -y nodejs
+[?2004lbash: curl: command not found
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 7%Reading package lists... 7%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 85%Reading package lists... 86%Reading package lists... 86%Reading package lists... 89%Reading package lists... 89%Reading package lists... 91%Reading package lists... 91%Reading package lists... 93%Reading package lists... 93%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 96%Reading package lists... 96%Reading package lists... 97%Reading package lists... 97%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 98%Reading state information... Done
+The following additional packages will be installed:
+  ca-certificates libbrotli1 libcares2 libicu74 libnghttp2-14 libnode109 libssl3t64 libuv1t64 node-acorn node-busboy
+  node-cjs-module-lexer node-undici node-xtend nodejs-doc openssl
+Suggested packages:
+  npm
+The following NEW packages will be installed:
+  ca-certificates libbrotli1 libcares2 libicu74 libnghttp2-14 libnode109 libuv1t64 node-acorn node-busboy
+  node-cjs-module-lexer node-undici node-xtend nodejs nodejs-doc openssl
+The following packages will be upgraded:
+  libssl3t64
+1 upgraded, 15 newly installed, 0 to remove and 28 not upgraded.
+Need to get 29.9 MB of archives.
+After this operation, 108 MB of additional disk space will be used.
+[33m0% [Working][0m            Get:1 http://ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libssl3t64 arm64 3.0.13-0ubuntu3.4 [1796 kB]
+[33m0% [1 libssl3t64 6745 B/1796 kB 0%][0m[33m4% [1 libssl3t64 1425 kB/1796 kB 79%][0m[33m                                     6% [Working][0m            Get:2 http://ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 openssl arm64 3.0.13-0ubuntu3.4 [985 kB]
+[33m6% [2 openssl 5347 B/985 kB 1%][0m[33m                               10% [Waiting for headers][0m                         Get:3 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 ca-certificates all 20240203 [159 kB]
+[33m10% [3 ca-certificates 4652 B/159 kB 3%][0m[33m                                        12% [Waiting for headers][0m                         Get:4 http://ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libicu74 arm64 74.2-1ubuntu3.1 [10.8 MB]
+[33m12% [4 libicu74 4110 B/10.8 MB 0%][0m[33m18% [4 libicu74 2513 kB/10.8 MB 23%][0m[33m25% [4 libicu74 5008 kB/10.8 MB 46%][0m[33m31% [4 libicu74 7396 kB/10.8 MB 68%][0m[33m38% [4 libicu74 9755 kB/10.8 MB 90%][0m[33m                                    42% [Waiting for headers][0m                         Get:5 http://ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 libnghttp2-14 arm64 1.59.0-1ubuntu0.1 [74.4 kB]
+[33m42% [5 libnghttp2-14 14.0 kB/74.4 kB 19%][0m[33m                                         43% [Waiting for headers][0m                         Get:6 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 libuv1t64 arm64 1.48.0-1.1build1 [95.3 kB]
+[33m43% [6 libuv1t64 30.6 kB/95.3 kB 32%][0m[33m                                     45% [Waiting for headers][0m                         Get:7 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 libbrotli1 arm64 1.1.0-2build2 [339 kB]
+[33m45% [7 libbrotli1 1001 B/339 kB 0%][0m[33m                                   47% [Waiting for headers][0m                         Get:8 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 libcares2 arm64 1.27.0-1.0ubuntu1 [74.1 kB]
+[33m47% [8 libcares2 468 B/74.1 kB 1%][0m[33m                                  48% [Waiting for headers][0m                         Get:9 http://ports.ubuntu.com/ubuntu-ports noble/universe arm64 node-xtend all 4.0.2-3 [3902 B]
+[33m48% [9 node-xtend 3902 B/3902 B 100%][0m[33m                                     50% [Working][0m             Get:10 http://ports.ubuntu.com/ubuntu-ports noble/universe arm64 nodejs arm64 18.19.1+dfsg-6ubuntu5 [306 kB]
+[33m50% [10 nodejs 4798 B/306 kB 2%][0m[33m                                52% [Waiting for headers][0m                         Get:11 http://ports.ubuntu.com/ubuntu-ports noble/universe arm64 node-acorn all 8.8.1+ds+~cs25.17.7-2 [115 kB]
+[33m52% [11 node-acorn 17.9 kB/115 kB 16%][0m[33m                                      53% [Working][0m             Get:12 http://ports.ubuntu.com/ubuntu-ports noble/universe arm64 node-cjs-module-lexer all 1.2.3+dfsg-1 [32.1 kB]
+[33m53% [12 node-cjs-module-lexer 2549 B/32.1 kB 8%][0m[33m                                                55% [Working][0m             Get:13 http://ports.ubuntu.com/ubuntu-ports noble/universe arm64 node-busboy all 1.6.0+~cs2.6.0-2 [17.3 kB]
+[33m55% [13 node-busboy 2549 B/17.3 kB 15%][0m[33m                                       56% [Waiting for headers][0m                         Get:14 http://ports.ubuntu.com/ubuntu-ports noble/universe arm64 node-undici all 5.26.3+dfsg1+~cs23.10.12-2 [325 kB]
+[33m56% [14 node-undici 1842 B/325 kB 1%][0m[33m                                     58% [Waiting for headers][0m                         Get:15 http://ports.ubuntu.com/ubuntu-ports noble/universe arm64 libnode109 arm64 18.19.1+dfsg-6ubuntu5 [11.2 MB]
+[33m58% [15 libnode109 8310 B/11.2 MB 0%][0m[33m65% [15 libnode109 2626 kB/11.2 MB 23%][0m[33m72% [15 libnode109 5134 kB/11.2 MB 46%][0m[33m79% [15 libnode109 7840 kB/11.2 MB 70%][0m[33m85% [15 libnode109 10.0 MB/11.2 MB 90%][0m[33m89% [Waiting for headers]                                                                                    4350 kB/s 0s[0m                                                                                                                         Get:16 http://ports.ubuntu.com/ubuntu-ports noble/universe arm64 nodejs-doc all 18.19.1+dfsg-6ubuntu5 [3552 kB]
+[33m89% [16 nodejs-doc 3089 B/3552 kB 0%]                                                                        4350 kB/s 0s[0m[33m96% [16 nodejs-doc 2647 kB/3552 kB 75%]                                                                      4350 kB/s 0s[0m[33m100% [Working]                                                                                               4350 kB/s 0s[0m                                                                                                                         Fetched 29.9 MB in 7s (4430 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+
+7[0;22r8[1A(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4444 files and directories currently installed.)
+Preparing to unpack .../libssl3t64_3.0.13-0ubuntu3.4_arm64.deb ...
+7[23;0f[42m[30mProgress: [  0%][49m[39m [....................................................................................................] 87[23;0f[42m[30mProgress: [  2%][49m[39m [#...................................................................................................] 8Unpacking libssl3t64:arm64 (3.0.13-0ubuntu3.4) over (3.0.13-0ubuntu3.2) ...
+7[23;0f[42m[30mProgress: [  3%][49m[39m [###.................................................................................................] 8Setting up libssl3t64:arm64 (3.0.13-0ubuntu3.4) ...
+7[23;0f[42m[30mProgress: [  5%][49m[39m [####................................................................................................] 87[23;0f[42m[30mProgress: [  6%][49m[39m [######..............................................................................................] 8Selecting previously unselected package openssl.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4444 files and directories currently installed.)
+Preparing to unpack .../00-openssl_3.0.13-0ubuntu3.4_arm64.deb ...
+7[23;0f[42m[30mProgress: [  8%][49m[39m [#######.............................................................................................] 8Unpacking openssl (3.0.13-0ubuntu3.4) ...
+7[23;0f[42m[30mProgress: [  9%][49m[39m [#########...........................................................................................] 8Selecting previously unselected package ca-certificates.
+Preparing to unpack .../01-ca-certificates_20240203_all.deb ...
+7[23;0f[42m[30mProgress: [ 11%][49m[39m [##########..........................................................................................] 8Unpacking ca-certificates (20240203) ...
+7[23;0f[42m[30mProgress: [ 12%][49m[39m [############........................................................................................] 8Selecting previously unselected package libicu74:arm64.
+Preparing to unpack .../02-libicu74_74.2-1ubuntu3.1_arm64.deb ...
+7[23;0f[42m[30mProgress: [ 14%][49m[39m [#############.......................................................................................] 8Unpacking libicu74:arm64 (74.2-1ubuntu3.1) ...
+7[23;0f[42m[30mProgress: [ 15%][49m[39m [###############.....................................................................................] 8Selecting previously unselected package libnghttp2-14:arm64.
+Preparing to unpack .../03-libnghttp2-14_1.59.0-1ubuntu0.1_arm64.deb ...
+7[23;0f[42m[30mProgress: [ 17%][49m[39m [################....................................................................................] 8Unpacking libnghttp2-14:arm64 (1.59.0-1ubuntu0.1) ...
+7[23;0f[42m[30mProgress: [ 18%][49m[39m [##################..................................................................................] 8Selecting previously unselected package libuv1t64:arm64.
+Preparing to unpack .../04-libuv1t64_1.48.0-1.1build1_arm64.deb ...
+7[23;0f[42m[30mProgress: [ 20%][49m[39m [####################................................................................................] 8Unpacking libuv1t64:arm64 (1.48.0-1.1build1) ...
+7[23;0f[42m[30mProgress: [ 22%][49m[39m [#####################...............................................................................] 8Selecting previously unselected package libbrotli1:arm64.
+Preparing to unpack .../05-libbrotli1_1.1.0-2build2_arm64.deb ...
+7[23;0f[42m[30mProgress: [ 23%][49m[39m [#######################.............................................................................] 8Unpacking libbrotli1:arm64 (1.1.0-2build2) ...
+7[23;0f[42m[30mProgress: [ 25%][49m[39m [########################............................................................................] 8Selecting previously unselected package libcares2:arm64.
+Preparing to unpack .../06-libcares2_1.27.0-1.0ubuntu1_arm64.deb ...
+7[23;0f[42m[30mProgress: [ 26%][49m[39m [##########################..........................................................................] 8Unpacking libcares2:arm64 (1.27.0-1.0ubuntu1) ...
+7[23;0f[42m[30mProgress: [ 28%][49m[39m [###########################.........................................................................] 8Selecting previously unselected package node-xtend.
+Preparing to unpack .../07-node-xtend_4.0.2-3_all.deb ...
+7[23;0f[42m[30mProgress: [ 29%][49m[39m [#############################.......................................................................] 8Unpacking node-xtend (4.0.2-3) ...
+7[23;0f[42m[30mProgress: [ 31%][49m[39m [##############################......................................................................] 8Selecting previously unselected package nodejs.
+Preparing to unpack .../08-nodejs_18.19.1+dfsg-6ubuntu5_arm64.deb ...
+7[23;0f[42m[30mProgress: [ 32%][49m[39m [################################....................................................................] 8Unpacking nodejs (18.19.1+dfsg-6ubuntu5) ...
+7[23;0f[42m[30mProgress: [ 34%][49m[39m [#################################...................................................................] 8Selecting previously unselected package node-acorn.
+Preparing to unpack .../09-node-acorn_8.8.1+ds+~cs25.17.7-2_all.deb ...
+7[23;0f[42m[30mProgress: [ 35%][49m[39m [###################################.................................................................] 8Unpacking node-acorn (8.8.1+ds+~cs25.17.7-2) ...
+7[23;0f[42m[30mProgress: [ 37%][49m[39m [####################################................................................................] 8Selecting previously unselected package node-cjs-module-lexer.
+Preparing to unpack .../10-node-cjs-module-lexer_1.2.3+dfsg-1_all.deb ...
+7[23;0f[42m[30mProgress: [ 38%][49m[39m [######################################..............................................................] 8Unpacking node-cjs-module-lexer (1.2.3+dfsg-1) ...
+7[23;0f[42m[30mProgress: [ 40%][49m[39m [########################################............................................................] 8Selecting previously unselected package node-busboy.
+Preparing to unpack .../11-node-busboy_1.6.0+~cs2.6.0-2_all.deb ...
+7[23;0f[42m[30mProgress: [ 42%][49m[39m [#########################################...........................................................] 8Unpacking node-busboy (1.6.0+~cs2.6.0-2) ...
+7[23;0f[42m[30mProgress: [ 43%][49m[39m [###########################################.........................................................] 8Selecting previously unselected package node-undici.
+Preparing to unpack .../12-node-undici_5.26.3+dfsg1+~cs23.10.12-2_all.deb ...
+7[23;0f[42m[30mProgress: [ 45%][49m[39m [############################################........................................................] 8Unpacking node-undici (5.26.3+dfsg1+~cs23.10.12-2) ...
+7[23;0f[42m[30mProgress: [ 46%][49m[39m [##############################################......................................................] 8Selecting previously unselected package libnode109:arm64.
+Preparing to unpack .../13-libnode109_18.19.1+dfsg-6ubuntu5_arm64.deb ...
+7[23;0f[42m[30mProgress: [ 48%][49m[39m [###############################################.....................................................] 8Unpacking libnode109:arm64 (18.19.1+dfsg-6ubuntu5) ...
+7[23;0f[42m[30mProgress: [ 49%][49m[39m [#################################################...................................................] 8Selecting previously unselected package nodejs-doc.
+Preparing to unpack .../14-nodejs-doc_18.19.1+dfsg-6ubuntu5_all.deb ...
+7[23;0f[42m[30mProgress: [ 51%][49m[39m [##################################################..................................................] 8Unpacking nodejs-doc (18.19.1+dfsg-6ubuntu5) ...
+7[23;0f[42m[30mProgress: [ 52%][49m[39m [####################################################................................................] 8Setting up libbrotli1:arm64 (1.1.0-2build2) ...
+7[23;0f[42m[30mProgress: [ 54%][49m[39m [#####################################################...............................................] 87[23;0f[42m[30mProgress: [ 55%][49m[39m [#######################################################.............................................] 8Setting up libuv1t64:arm64 (1.48.0-1.1build1) ...
+7[23;0f[42m[30mProgress: [ 57%][49m[39m [########################################################............................................] 87[23;0f[42m[30mProgress: [ 58%][49m[39m [##########################################################..........................................] 8Setting up libnghttp2-14:arm64 (1.59.0-1ubuntu0.1) ...
+7[23;0f[42m[30mProgress: [ 60%][49m[39m [############################################################........................................] 87[23;0f[42m[30mProgress: [ 62%][49m[39m [#############################################################.......................................] 8Setting up node-cjs-module-lexer (1.2.3+dfsg-1) ...
+7[23;0f[42m[30mProgress: [ 63%][49m[39m [###############################################################.....................................] 87[23;0f[42m[30mProgress: [ 65%][49m[39m [################################################################....................................] 8Setting up libcares2:arm64 (1.27.0-1.0ubuntu1) ...
+7[23;0f[42m[30mProgress: [ 66%][49m[39m [##################################################################..................................] 87[23;0f[42m[30mProgress: [ 68%][49m[39m [###################################################################.................................] 8Setting up nodejs-doc (18.19.1+dfsg-6ubuntu5) ...
+7[23;0f[42m[30mProgress: [ 69%][49m[39m [#####################################################################...............................] 87[23;0f[42m[30mProgress: [ 71%][49m[39m [######################################################################..............................] 8Setting up libicu74:arm64 (74.2-1ubuntu3.1) ...
+7[23;0f[42m[30mProgress: [ 72%][49m[39m [########################################################################............................] 87[23;0f[42m[30mProgress: [ 74%][49m[39m [#########################################################################...........................] 8Setting up node-xtend (4.0.2-3) ...
+7[23;0f[42m[30mProgress: [ 75%][49m[39m [###########################################################################.........................] 87[23;0f[42m[30mProgress: [ 77%][49m[39m [############################################################################........................] 8Setting up openssl (3.0.13-0ubuntu3.4) ...
+7[23;0f[42m[30mProgress: [ 78%][49m[39m [##############################################################################......................] 87[23;0f[42m[30mProgress: [ 80%][49m[39m [################################################################################....................] 8Setting up node-busboy (1.6.0+~cs2.6.0-2) ...
+7[23;0f[42m[30mProgress: [ 82%][49m[39m [#################################################################################...................] 87[23;0f[42m[30mProgress: [ 83%][49m[39m [###################################################################################.................] 8Setting up ca-certificates (20240203) ...
+7[23;0f[42m[30mProgress: [ 85%][49m[39m [####################################################################################................] 8debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/aarch64-linux-gnu/perl/5.38.2 /usr/local/share/perl/5.38.2 /usr/lib/aarch64-linux-gnu/perl5/5.38 /usr/share/perl5 /usr/lib/aarch64-linux-gnu/perl-base /usr/lib/aarch64-linux-gnu/perl/5.38 /usr/share/perl/5.38 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8.)
+debconf: falling back to frontend: Teletype
+Updating certificates in /etc/ssl/certs...
+146 added, 0 removed; done.
+7[23;0f[42m[30mProgress: [ 86%][49m[39m [######################################################################################..............] 8Setting up node-undici (5.26.3+dfsg1+~cs23.10.12-2) ...
+Setting up node-acorn (8.8.1+ds+~cs25.17.7-2) ...
+7[23;0f[42m[30mProgress: [ 88%][49m[39m [########################################################################################............] 87[23;0f[42m[30mProgress: [ 90%][49m[39m [#########################################################################################...........] 8Setting up libnode109:arm64 (18.19.1+dfsg-6ubuntu5) ...
+7[23;0f[42m[30mProgress: [ 91%][49m[39m [###########################################################################################.........] 87[23;0f[42m[30mProgress: [ 93%][49m[39m [############################################################################################........] 8Setting up nodejs (18.19.1+dfsg-6ubuntu5) ...
+7[23;0f[42m[30mProgress: [ 94%][49m[39m [##############################################################################################......] 8update-alternatives: using /usr/bin/nodejs to provide /usr/bin/js (js) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/js.1.gz because associated file /usr/share/man/man1/nodejs.1.gz (of link group js) doesn't exist
+7[23;0f[42m[30mProgress: [ 96%][49m[39m [###############################################################################################.....] 8Processing triggers for libc-bin (2.39-0ubuntu8.2) ...
+Processing triggers for ca-certificates (20240203) ...
+7[23;0f[42m[30mProgress: [ 97%][49m[39m [#################################################################################################...] 8Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+7[23;0f[42m[30mProgress: [ 99%][49m[39m [##################################################################################################..] 8
+7[0;23r8[1A[J[?2004h]0;root@e6e0ca278c63: /root@e6e0ca278c63:/# [K[7mroot@b8548b9faec3:/# node /usr/src/app/index.js[27m
+[7mHello World[27m[A278c63:/# root@b8548b9faec3:/# node /usr/src/app/index.js
+Hello World           [A]0;root@e6e0ca278c63: /root@e6e0ca278c63:/# root@b8548b9faec3:/# node /usr/src/app/index.js
+[K[K[Aroot@e6e0ca278c63:/# root@b8548b9faec3:/# node /usr/src/app/index.js
+[?2004lbash: root@b8548b9faec3:/#: No such file or directory
+[?2004h]0;root@e6e0ca278c63: /root@e6e0ca278c63:/# [K[7mroot@b8548b9faec3:/# node /usr/src/app/index.js[27m
+[7mHello World[27m[A278c63:/# root@b8548b9faec3:/# node /usr/src/app/index.js
+Hello World
+[?2004lbash: root@b8548b9faec3:/#: No such file or directory
+bash: Hello: command not found
+[?2004h]0;root@e6e0ca278c63: /root@e6e0ca278c63:/# [Kls -la
+[?2004ltotal 68
+drwxr-xr-x   1 root root 4096 Sep 14 16:27 [0m[01;34m.[0m
+drwxr-xr-x   1 root root 4096 Sep 14 16:27 [01;34m..[0m
+-rwxr-xr-x   1 root root    0 Sep 14 16:27 [01;32m.dockerenv[0m
+lrwxrwxrwx   1 root root    7 Apr 22 13:08 [01;36mbin[0m -> [01;34musr/bin[0m
+drwxr-xr-x   2 root root 4096 Apr 22 13:08 [01;34mboot[0m
+drwxr-xr-x   5 root root  360 Sep 14 16:34 [01;34mdev[0m
+drwxr-xr-x   1 root root 4096 Sep 14 16:35 [01;34metc[0m
+drwxr-xr-x   3 root root 4096 Aug  1 13:13 [01;34mhome[0m
+lrwxrwxrwx   1 root root    7 Apr 22 13:08 [01;36mlib[0m -> [01;34musr/lib[0m
+drwxr-xr-x   2 root root 4096 Aug  1 12:58 [01;34mmedia[0m
+drwxr-xr-x   2 root root 4096 Aug  1 12:58 [01;34mmnt[0m
+drwxr-xr-x   2 root root 4096 Aug  1 12:58 [01;34mopt[0m
+dr-xr-xr-x 242 root root    0 Sep 14 16:34 [01;34mproc[0m
+drwx------   1 root root 4096 Sep 14 16:31 [01;34mroot[0m
+drwxr-xr-x   4 root root 4096 Aug  1 13:13 [01;34mrun[0m
+lrwxrwxrwx   1 root root    8 Apr 22 13:08 [01;36msbin[0m -> [01;34musr/sbin[0m
+drwxr-xr-x   2 root root 4096 Aug  1 12:58 [01;34msrv[0m
+dr-xr-xr-x  11 root root    0 Sep 14 16:28 [01;34msys[0m
+drwxrwxrwt   1 root root 4096 Sep 14 16:35 [30;42mtmp[0m
+drwxr-xr-x   1 root root 4096 Aug  1 12:58 [01;34musr[0m
+drwxr-xr-x   1 root root 4096 Aug  1 13:12 [01;34mvar[0m
+[?2004h]0;root@e6e0ca278c63: /root@e6e0ca278c63:/# - cd usr/src/app
+[?2004l[?2004h]0;root@e6e0ca278c63: /usr/src/approot@e6e0ca278c63:/usr/src/app# ls -la
+[?2004ltotal 12
+drwxr-xr-x 2 root root 4096 Sep 14 16:31 [0m[01;34m.[0m
+drwxr-xr-x 1 root root 4096 Sep 14 16:29 [01;34m..[0m
+-rw-r--r-- 1 root root   27 Sep 14 16:31 index.js
+[?2004h]0;root@e6e0ca278c63: /usr/src/approot@e6e0ca278c63:/usr/src/app# node -v
+[?2004lv18.19.1
+[?2004h]0;root@e6e0ca278c63: /usr/src/approot@e6e0ca278c63:/usr/src/app# node index.js
+[?2004lHello World
+[?2004h]0;root@e6e0ca278c63: /usr/src/approot@e6e0ca278c63:/usr/src/app# exit
+[?2004lexit
+sh-3.2# docker commit [K[K[K[K[K[K[K-ps
+unknown shorthand flag: 'p' in -ps
+See 'docker --help'.
+
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Common Commands:
+  run         Create and run a new container from an image
+  exec        Execute a command in a running container
+  ps          List containers
+  build       Build an image from a Dockerfile
+  pull        Download an image from a registry
+  push        Upload an image to a registry
+  images      List images
+  login       Log in to a registry
+  logout      Log out from a registry
+  search      Search Docker Hub for images
+  version     Show the Docker version information
+  info        Display system-wide information
+
+Management Commands:
+  builder     Manage builds
+  buildx*     Docker Buildx
+  compose*    Docker Compose
+  container   Manage containers
+  context     Manage contexts
+  debug*      Get a shell into any image or container
+  desktop*    Docker Desktop commands (Alpha)
+  dev*        Docker Dev Environments
+  extension*  Manages Docker extensions
+  feedback*   Provide feedback, right in your terminal!
+  image       Manage images
+  init*       Creates Docker-related starter files for your project
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  plugin      Manage plugins
+  sbom*       View the packaged-based Software Bill Of Materials (SBOM) for an image
+  scout*      Docker Scout
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Swarm Commands:
+  swarm       Manage Swarm
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  wait        Block until one or more containers stop, then print their exit codes
+
+Global Options:
+      --config string      Location of client config files (default "/Users/erkkafiner/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and
+                           default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket to connect to
+  -l, --log-level string   Set the logging level ("debug", "info", "warn", "error", "fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/Users/erkkafiner/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/Users/erkkafiner/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/Users/erkkafiner/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Run 'docker COMMAND --help' for more information on a command.
+
+For more help on how to use Docker, head to https://docs.docker.com/go/guides/
+
+sh-3.2# docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+sh-3.2# docker ps-a[K[K -a
+CONTAINER ID   IMAGE         COMMAND    CREATED          STATUS                          PORTS     NAMES
+e6e0ca278c63   ubuntu        "bash"     11 minutes ago   Exited (0) About a minute ago             hungry_brahmagupta
+b5c39f10432c   hello-world   "/hello"   11 minutes ago   Exited (0) 5 minutes ago                  reverent_chaplygin
+sh-3.2# docker commit hungry_brahmagupta hello-node-world
+sha256:943de1c5c1a57d2b878acd8dd1a47f0f81e05e55f8b06c5dece76aee282543cb
+sh-3.2# image ls
+sh: image: command not found
+sh-3.2# docker image ls
+REPOSITORY         TAG       IMAGE ID       CREATED          SIZE
+hello-node-world   latest    943de1c5c1a5   20 seconds ago   239MB
+ubuntu             latest    1a799365aa63   6 weeks ago      101MB
+hello-world        latest    ee301c921b8a   16 months ago    9.14kB
+sh-3.2# docker start[K[K[K[K[Krun [K[K[K[K[K run -it hello-node-world bash[K[K[K[Ksh
+# dicj ´´    ocker container rm hungry  _brahmagupta
+sh: 1: dicocker: not found
+# ^[[A^[[A        exit
+sh-3.2# docker run -it hello-node-world sh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cimage ls[K[C[C[C[C[C[C[C[C[7P[C[C[C[C[C[C[C[Cdocker commit hungry_brahmagupta hello-node-world[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kontainer ls -a
+CONTAINER ID   IMAGE              COMMAND    CREATED              STATUS                        PORTS     NAMES
+2876534b398d   hello-node-world   "sh"       About a minute ago   Exited (127) 28 seconds ago             stoic_tu
+e6e0ca278c63   ubuntu             "bash"     17 minutes ago       Exited (0) 7 minutes ago                hungry_brahmagupta
+b5c39f10432c   hello-world        "/hello"   17 minutes ago       Exited (0) 11 minutes ago               reverent_chaplygin
+sh-3.2# docker container rm hungry_brahmagupta
+hungry_brahmagupta
+sh-3.2# ls -la
+total 0
+drwxr-xr-x   5 root  staff  160 Sep  7 20:29 .
+drwxr-xr-x   4 root  staff  128 Sep  7 11:32 ..
+drwxr-xr-x  13 root  staff  416 Sep  7 11:38 .git
+drwxr-xr-x   7 root  staff  224 Sep 14 19:34 script-answers
+drwxr-xr-x   5 root  staff  160 Sep  7 11:32 todo-app
+sh-3.2# touch index.js
+sh-3.2# nano [K[K[K[K[Kecx[Kho ""c"o"n"s"o"l"e"."l"o"g"("'"H"e"l"l"o" "[1P"," "W"o"r"l"d"'")"[C >> index.js
+sh-3.2# cat index.js
+console.log('Hello, World')
+sh-3.2# docker container run  -[K[K-it --name hello-node node:20 bash
+Unable to find image 'node:20' locally
+2024/09/14 19:51:02 must use ASL logging (which requires CGO) if running as root
+20: Pulling from library/node
+
+[1A[2K56c9b9253ff9: Pulling fs layer [1B
+[1A[2K364d19f59f69: Pulling fs layer [1B
+[1A[2K843b1d832182: Pulling fs layer [1B
+[1A[2Ka348c2a8d946: Pulling fs layer [1B
+[1A[2Kd51f64f1b1d9: Pulling fs layer [1B
+[1A[2K79c98ca317ce: Pulling fs layer [1B
+[1A[2K9e3f5b1f05a1: Pulling fs layer [1B
+[1A[2K10eba7243899: Pulling fs layer [1B[4A[2Kd51f64f1b1d9: Waiting [4B[3A[2K79c98ca317ce: Waiting [3B[2A[2K9e3f5b1f05a1: Waiting [2B[1A[2K10eba7243899: Waiting [1B[5A[2Ka348c2a8d946: Waiting [5B[7A[2K364d19f59f69: Downloading [>                                                  ]    245kB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [>                                                  ]  506.1kB/49.59MB[8B[7A[2K364d19f59f69: Downloading [=>                                                 ]  490.7kB/23.59MB[7B[6A[2K843b1d832182: Downloading [>                                                  ]  539.9kB/64MB[6B[7A[2K364d19f59f69: Downloading [=>                                                 ]  736.5kB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [=>                                                 ]   1.01MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [==>                                                ]  982.2kB/23.59MB[7B[6A[2K843b1d832182: Downloading [>                                                  ]  1.081MB/64MB[6B[8A[2K56c9b9253ff9: Downloading [=>                                                 ]  1.514MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [===>                                               ]  1.469MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [==>                                                ]  2.022MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [===>                                               ]  1.719MB/23.59MB[7B[6A[2K843b1d832182: Downloading [=>                                                 ]  1.621MB/64MB[6B[7A[2K364d19f59f69: Downloading [====>                                              ]  1.964MB/23.59MB[7B[7A[2K364d19f59f69: Downloading [====>                                              ]   2.21MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [==>                                                ]   2.53MB/49.59MB[8B[6A[2K843b1d832182: Downloading [=>                                                 ]  2.153MB/64MB[6B[7A[2K364d19f59f69: Downloading [=====>                                             ]  2.456MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [===>                                               ]  3.037MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [=====>                                             ]  2.702MB/23.59MB[7B[7A[2K364d19f59f69: Downloading [======>                                            ]  2.947MB/23.59MB[7B[6A[2K843b1d832182: Downloading [==>                                                ]  2.693MB/64MB[6B[8A[2K56c9b9253ff9: Downloading [===>                                               ]  3.545MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [======>                                            ]  3.193MB/23.59MB[7B[7A[2K364d19f59f69: Downloading [=======>                                           ]  3.439MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [====>                                              ]  4.053MB/49.59MB[8B[6A[2K843b1d832182: Downloading [==>                                                ]  3.234MB/64MB[6B[7A[2K364d19f59f69: Downloading [=======>                                           ]  3.685MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [====>                                              ]  4.561MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [========>                                          ]   3.93MB/23.59MB[7B[7A[2K364d19f59f69: Downloading [========>                                          ]  4.176MB/23.59MB[7B[6A[2K843b1d832182: Downloading [==>                                                ]  3.775MB/64MB[6B[8A[2K56c9b9253ff9: Downloading [=====>                                             ]  5.069MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [=========>                                         ]  4.422MB/23.59MB[7B[7A[2K364d19f59f69: Downloading [=========>                                         ]  4.668MB/23.59MB[7B[6A[2K843b1d832182: Downloading [===>                                               ]  4.315MB/64MB[6B[8A[2K56c9b9253ff9: Downloading [=====>                                             ]  5.577MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [==========>                                        ]  4.913MB/23.59MB[7B[7A[2K364d19f59f69: Downloading [==========>                                        ]  5.159MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [======>                                            ]  6.085MB/49.59MB[8B[6A[2K843b1d832182: Downloading [===>                                               ]  4.852MB/64MB[6B[7A[2K364d19f59f69: Downloading [===========>                                       ]  5.405MB/23.59MB[7B[7A[2K364d19f59f69: Downloading [===========>                                       ]  5.651MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [======>                                            ]  6.593MB/49.59MB[8B[6A[2K843b1d832182: Downloading [====>                                              ]  5.393MB/64MB[6B[7A[2K364d19f59f69: Downloading [============>                                      ]  5.896MB/23.59MB[7B[7A[2K364d19f59f69: Downloading [=============>                                     ]  6.142MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [=======>                                           ]  7.101MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [=============>                                     ]  6.388MB/23.59MB[7B[6A[2K843b1d832182: Downloading [====>                                              ]  5.933MB/64MB[6B[7A[2K364d19f59f69: Downloading [==============>                                    ]  6.634MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [=======>                                           ]  7.609MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [==============>                                    ]  6.879MB/23.59MB[7B[6A[2K843b1d832182: Downloading [=====>                                             ]  6.474MB/64MB[6B[8A[2K56c9b9253ff9: Downloading [========>                                          ]  8.116MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [===============>                                   ]  7.125MB/23.59MB[7B[7A[2K364d19f59f69: Downloading [===============>                                   ]  7.371MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [========>                                          ]  8.624MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [================>                                  ]  7.617MB/23.59MB[7B[6A[2K843b1d832182: Downloading [=====>                                             ]  7.015MB/64MB[6B[7A[2K364d19f59f69: Downloading [================>                                  ]  7.863MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [=========>                                         ]  9.132MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [=================>                                 ]  8.108MB/23.59MB[7B[6A[2K843b1d832182: Downloading [=====>                                             ]  7.555MB/64MB[6B[8A[2K56c9b9253ff9: Downloading [=========>                                         ]   9.64MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [=================>                                 ]  8.354MB/23.59MB[7B[7A[2K364d19f59f69: Downloading [==================>                                ]    8.6MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [==========>                                        ]  10.15MB/49.59MB[8B[6A[2K843b1d832182: Downloading [======>                                            ]  8.096MB/64MB[6B[7A[2K364d19f59f69: Downloading [==================>                                ]  8.846MB/23.59MB[7B[7A[2K364d19f59f69: Downloading [===================>                               ]  9.091MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [==========>                                        ]  10.66MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [===================>                               ]  9.337MB/23.59MB[7B[6A[2K843b1d832182: Downloading [======>                                            ]  8.637MB/64MB[6B[7A[2K364d19f59f69: Downloading [====================>                              ]  9.583MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [===========>                                       ]  11.16MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [====================>                              ]  9.829MB/23.59MB[7B[6A[2K843b1d832182: Downloading [=======>                                           ]  9.177MB/64MB[6B[7A[2K364d19f59f69: Downloading [=====================>                             ]  10.07MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [===========>                                       ]  11.67MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [=====================>                             ]  10.32MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [============>                                      ]  12.18MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [======================>                            ]  10.57MB/23.59MB[7B[6A[2K843b1d832182: Downloading [=======>                                           ]  9.718MB/64MB[6B[7A[2K364d19f59f69: Downloading [======================>                            ]  10.81MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [============>                                      ]  12.69MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [=======================>                           ]  11.06MB/23.59MB[7B[6A[2K843b1d832182: Downloading [========>                                          ]  10.26MB/64MB[6B[7A[2K364d19f59f69: Downloading [=======================>                           ]   11.3MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [=============>                                     ]   13.2MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [========================>                          ]  11.55MB/23.59MB[7B[7A[2K364d19f59f69: Downloading [========================>                          ]  11.79MB/23.59MB[7B[6A[2K843b1d832182: Downloading [========>                                          ]   10.8MB/64MB[6B[8A[2K56c9b9253ff9: Downloading [=============>                                     ]   13.7MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [=========================>                         ]  12.04MB/23.59MB[7B[7A[2K364d19f59f69: Downloading [==========================>                        ]  12.29MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [==============>                                    ]  14.21MB/49.59MB[8B[6A[2K843b1d832182: Downloading [========>                                          ]  11.34MB/64MB[6B[7A[2K364d19f59f69: Downloading [==========================>                        ]  12.53MB/23.59MB[7B[7A[2K364d19f59f69: Downloading [===========================>                       ]  12.78MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [==============>                                    ]  14.72MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [===========================>                       ]  13.02MB/23.59MB[7B[6A[2K843b1d832182: Downloading [=========>                                         ]  11.88MB/64MB[6B[7A[2K364d19f59f69: Downloading [============================>                      ]  13.27MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [===============>                                   ]  15.23MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [============================>                      ]  13.51MB/23.59MB[7B[6A[2K843b1d832182: Downloading [=========>                                         ]  12.42MB/64MB[6B[8A[2K56c9b9253ff9: Downloading [===============>                                   ]  15.73MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [=============================>                     ]  13.76MB/23.59MB[7B[7A[2K364d19f59f69: Downloading [=============================>                     ]  14.01MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [================>                                  ]  16.24MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [==============================>                    ]  14.25MB/23.59MB[7B[6A[2K843b1d832182: Downloading [==========>                                        ]  12.96MB/64MB[6B[7A[2K364d19f59f69: Downloading [==============================>                    ]   14.5MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [================>                                  ]  16.75MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [===============================>                   ]  14.74MB/23.59MB[7B[6A[2K843b1d832182: Downloading [==========>                                        ]   13.5MB/64MB[6B[8A[2K56c9b9253ff9: Downloading [=================>                                 ]  17.25MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [===============================>                   ]  14.99MB/23.59MB[7B[7A[2K364d19f59f69: Downloading [================================>                  ]  15.24MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [=================>                                 ]  17.76MB/49.59MB[8B[6A[2K843b1d832182: Downloading [==========>                                        ]  14.04MB/64MB[6B[7A[2K364d19f59f69: Downloading [================================>                  ]  15.48MB/23.59MB[7B[7A[2K364d19f59f69: Downloading [=================================>                 ]  15.73MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [==================>                                ]  18.27MB/49.59MB[8B[6A[2K843b1d832182: Downloading [===========>                                       ]  14.58MB/64MB[6B[7A[2K364d19f59f69: Downloading [=================================>                 ]  15.97MB/23.59MB[7B[7A[2K364d19f59f69: Downloading [==================================>                ]  16.22MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [==================>                                ]  18.78MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [==================================>                ]  16.46MB/23.59MB[7B[6A[2K843b1d832182: Downloading [===========>                                       ]  15.12MB/64MB[6B[7A[2K364d19f59f69: Downloading [===================================>               ]  16.71MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [===================>                               ]  19.29MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [===================================>               ]  16.96MB/23.59MB[7B[7A[2K364d19f59f69: Downloading [====================================>              ]   17.2MB/23.59MB[7B[6A[2K843b1d832182: Downloading [============>                                      ]  15.66MB/64MB[6B[8A[2K56c9b9253ff9: Downloading [===================>                               ]  19.79MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [====================================>              ]  17.45MB/23.59MB[7B[7A[2K364d19f59f69: Downloading [=====================================>             ]  17.69MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [====================>                              ]   20.3MB/49.59MB[8B[6A[2K843b1d832182: Downloading [============>                                      ]   16.2MB/64MB[6B[7A[2K364d19f59f69: Downloading [======================================>            ]  17.94MB/23.59MB[7B[7A[2K364d19f59f69: Downloading [======================================>            ]  18.18MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [====================>                              ]  20.81MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [=======================================>           ]  18.43MB/23.59MB[7B[7A[2K364d19f59f69: Downloading [=======================================>           ]  18.68MB/23.59MB[7B[6A[2K843b1d832182: Downloading [=============>                                     ]  16.74MB/64MB[6B[7A[2K364d19f59f69: Downloading [========================================>          ]  18.92MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [=====================>                             ]  21.32MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [========================================>          ]  19.17MB/23.59MB[7B[6A[2K843b1d832182: Downloading [=============>                                     ]  17.28MB/64MB[6B[7A[2K364d19f59f69: Downloading [=========================================>         ]  19.41MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [======================>                            ]  21.83MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [=========================================>         ]  19.66MB/23.59MB[7B[7A[2K364d19f59f69: Downloading [==========================================>        ]   19.9MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [======================>                            ]  22.33MB/49.59MB[8B[6A[2K843b1d832182: Downloading [=============>                                     ]  17.82MB/64MB[6B[7A[2K364d19f59f69: Downloading [==========================================>        ]  20.15MB/23.59MB[7B[7A[2K364d19f59f69: Downloading [===========================================>       ]   20.4MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [=======================>                           ]  22.85MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [===========================================>       ]  20.64MB/23.59MB[7B[7A[2K364d19f59f69: Downloading [============================================>      ]  20.89MB/23.59MB[7B[6A[2K843b1d832182: Downloading [==============>                                    ]  18.36MB/64MB[6B[8A[2K56c9b9253ff9: Downloading [=======================>                           ]  23.35MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [============================================>      ]  21.13MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [========================>                          ]  23.86MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [=============================================>     ]  21.38MB/23.59MB[7B[6A[2K843b1d832182: Downloading [==============>                                    ]  18.91MB/64MB[6B[7A[2K364d19f59f69: Downloading [=============================================>     ]  21.63MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [========================>                          ]  24.37MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [==============================================>    ]  21.87MB/23.59MB[7B[7A[2K364d19f59f69: Downloading [==============================================>    ]  22.12MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [=========================>                         ]  24.88MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [===============================================>   ]  22.36MB/23.59MB[7B[6A[2K843b1d832182: Downloading [===============>                                   ]  19.45MB/64MB[6B[8A[2K56c9b9253ff9: Downloading [=========================>                         ]  25.39MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [===============================================>   ]  22.61MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [==========================>                        ]  25.89MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [================================================>  ]  22.85MB/23.59MB[7B[7A[2K364d19f59f69: Downloading [================================================>  ]   23.1MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [==========================>                        ]   26.4MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [=================================================> ]  23.35MB/23.59MB[7B[8A[2K56c9b9253ff9: Downloading [===========================>                       ]  26.91MB/49.59MB[8B[7A[2K364d19f59f69: Downloading [=================================================> ]  23.59MB/23.59MB[7B[7A[2K364d19f59f69: Verifying Checksum [7B[7A[2K364d19f59f69: Download complete [7B[8A[2K56c9b9253ff9: Downloading [===========================>                       ]  27.42MB/49.59MB[8B[6A[2K843b1d832182: Downloading [===============>                                   ]  19.98MB/64MB[6B[8A[2K56c9b9253ff9: Downloading [============================>                      ]  27.92MB/49.59MB[8B[8A[2K56c9b9253ff9: Downloading [============================>                      ]  28.43MB/49.59MB[8B[8A[2K56c9b9253ff9: Downloading [=============================>                     ]  28.93MB/49.59MB[8B[8A[2K56c9b9253ff9: Downloading [=============================>                     ]  29.44MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [>                                                  ]  527.6kB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [==============================>                    ]  29.95MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [>                                                  ]  1.068MB/202.7MB[5B[6A[2K843b1d832182: Downloading [================>                                  ]  20.52MB/64MB[6B[8A[2K56c9b9253ff9: Downloading [==============================>                    ]  30.46MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [>                                                  ]  1.609MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [===============================>                   ]  30.96MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [>                                                  ]   2.15MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [===============================>                   ]  31.47MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [>                                                  ]   2.69MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [================================>                  ]  31.98MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [>                                                  ]  3.231MB/202.7MB[5B[6A[2K843b1d832182: Downloading [================>                                  ]  21.06MB/64MB[6B[8A[2K56c9b9253ff9: Downloading [================================>                  ]  32.49MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [>                                                  ]  3.772MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [=================================>                 ]     33MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [=>                                                 ]  4.312MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [=================================>                 ]   33.5MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [=>                                                 ]  4.853MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [==================================>                ]  34.01MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [=>                                                 ]  5.394MB/202.7MB[5B[6A[2K843b1d832182: Downloading [================>                                  ]   21.6MB/64MB[6B[8A[2K56c9b9253ff9: Downloading [==================================>                ]  34.52MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [=>                                                 ]  5.934MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [===================================>               ]  35.03MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [=>                                                 ]  6.475MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [===================================>               ]  35.54MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [=>                                                 ]  7.016MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [====================================>              ]  36.03MB/49.59MB[8B[6A[2K843b1d832182: Downloading [=================>                                 ]  22.15MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [=>                                                 ]  7.556MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [====================================>              ]  36.54MB/49.59MB[8B[8A[2K56c9b9253ff9: Downloading [=====================================>             ]  37.05MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [=>                                                 ]  8.097MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [=====================================>             ]  37.56MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [==>                                                ]  8.638MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [======================================>            ]  38.07MB/49.59MB[8B[6A[2K843b1d832182: Downloading [=================>                                 ]  22.69MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [==>                                                ]  9.178MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [======================================>            ]  38.57MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [==>                                                ]  9.719MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [=======================================>           ]  39.08MB/49.59MB[8B[8A[2K56c9b9253ff9: Downloading [=======================================>           ]  39.59MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [==>                                                ]  10.26MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [========================================>          ]   40.1MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [==>                                                ]   10.8MB/202.7MB[5B[6A[2K843b1d832182: Downloading [==================>                                ]  23.23MB/64MB[6B[8A[2K56c9b9253ff9: Downloading [========================================>          ]  40.61MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [==>                                                ]  11.34MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [=========================================>         ]  41.11MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [==>                                                ]  11.88MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [=========================================>         ]  41.62MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [===>                                               ]  12.42MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [==========================================>        ]  42.13MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [===>                                               ]  12.96MB/202.7MB[5B[6A[2K843b1d832182: Downloading [==================>                                ]  23.77MB/64MB[6B[8A[2K56c9b9253ff9: Downloading [==========================================>        ]  42.64MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [===>                                               ]   13.5MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [===========================================>       ]  43.15MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [===>                                               ]  14.04MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [============================================>      ]  43.65MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [===>                                               ]  14.59MB/202.7MB[5B[6A[2K843b1d832182: Downloading [==================>                                ]  24.31MB/64MB[6B[8A[2K56c9b9253ff9: Downloading [============================================>      ]  44.16MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [===>                                               ]  15.13MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [=============================================>     ]  44.67MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [===>                                               ]  15.67MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [=============================================>     ]  45.18MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [===>                                               ]  16.21MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [==============================================>    ]  45.69MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [====>                                              ]  16.75MB/202.7MB[5B[6A[2K843b1d832182: Downloading [===================>                               ]  24.85MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [====>                                              ]  17.29MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [==============================================>    ]  46.19MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [====>                                              ]  17.83MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [===============================================>   ]   46.7MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [====>                                              ]  18.37MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [===============================================>   ]  47.21MB/49.59MB[8B[6A[2K843b1d832182: Downloading [===================>                               ]  25.38MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [====>                                              ]  18.91MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [================================================>  ]  47.72MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [====>                                              ]  19.45MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [================================================>  ]  48.22MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [====>                                              ]  19.99MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [=================================================> ]  48.73MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [=====>                                             ]  20.53MB/202.7MB[5B[6A[2K843b1d832182: Downloading [====================>                              ]  25.91MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [=====>                                             ]  21.07MB/202.7MB[5B[8A[2K56c9b9253ff9: Downloading [=================================================> ]  49.24MB/49.59MB[8B[8A[2K56c9b9253ff9: Verifying Checksum [8B[8A[2K56c9b9253ff9: Download complete [8B[5A[2Ka348c2a8d946: Downloading [=====>                                             ]  21.61MB/202.7MB[5B[8A[2K56c9b9253ff9: Extracting [>                                                  ]  524.3kB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [=====>                                             ]  22.15MB/202.7MB[5B[8A[2K56c9b9253ff9: Extracting [======>                                            ]  6.816MB/49.59MB[8B[8A[2K56c9b9253ff9: Extracting [==========>                                        ]  10.49MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [=====>                                             ]  22.69MB/202.7MB[5B[6A[2K843b1d832182: Downloading [====================>                              ]  26.45MB/64MB[6B[8A[2K56c9b9253ff9: Extracting [==============>                                    ]  14.68MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [=====>                                             ]  23.23MB/202.7MB[5B[8A[2K56c9b9253ff9: Extracting [======================>                            ]  22.02MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [=====>                                             ]  23.77MB/202.7MB[5B[4A[2Kd51f64f1b1d9: Downloading [==========>                                        ]     720B/3.322kB[4B[4A[2Kd51f64f1b1d9: Downloading [==================================================>]  3.322kB/3.322kB[4B[4A[2Kd51f64f1b1d9: Verifying Checksum [4B[4A[2Kd51f64f1b1d9: Download complete [4B[8A[2K56c9b9253ff9: Extracting [========================>                          ]  24.12MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [=====>                                             ]  24.31MB/202.7MB[5B[8A[2K56c9b9253ff9: Extracting [===========================>                       ]  27.26MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [======>                                            ]  24.85MB/202.7MB[5B[6A[2K843b1d832182: Downloading [=====================>                             ]  26.99MB/64MB[6B[8A[2K56c9b9253ff9: Extracting [===============================>                   ]  31.46MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [======>                                            ]  25.39MB/202.7MB[5B[8A[2K56c9b9253ff9: Extracting [===================================>               ]  35.65MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [======>                                            ]  25.93MB/202.7MB[5B[8A[2K56c9b9253ff9: Extracting [=======================================>           ]  39.32MB/49.59MB[8B[8A[2K56c9b9253ff9: Extracting [==========================================>        ]  42.47MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [======>                                            ]  26.47MB/202.7MB[5B[8A[2K56c9b9253ff9: Extracting [=============================================>     ]  45.09MB/49.59MB[8B[3A[2K79c98ca317ce: Downloading [>                                                  ]  486.6kB/48.11MB[3B[6A[2K843b1d832182: Downloading [=====================>                             ]  27.53MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [======>                                            ]  27.01MB/202.7MB[5B[8A[2K56c9b9253ff9: Extracting [===============================================>   ]  47.19MB/49.59MB[8B[3A[2K79c98ca317ce: Downloading [=>                                                 ]  978.2kB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [======>                                            ]  27.55MB/202.7MB[5B[8A[2K56c9b9253ff9: Extracting [=================================================> ]  48.76MB/49.59MB[8B[5A[2Ka348c2a8d946: Downloading [======>                                            ]  28.08MB/202.7MB[5B[8A[2K56c9b9253ff9: Extracting [==================================================>]  49.59MB/49.59MB[8B[3A[2K79c98ca317ce: Downloading [=>                                                 ]   1.46MB/48.11MB[3B[8A[2K56c9b9253ff9: Pull complete [8B[7A[2K364d19f59f69: Extracting [>                                                  ]  262.1kB/23.59MB[7B[7A[2K364d19f59f69: Extracting [===============>                                   ]   7.34MB/23.59MB[7B[5A[2Ka348c2a8d946: Downloading [=======>                                           ]  28.62MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [==>                                                ]  1.952MB/48.11MB[3B[6A[2K843b1d832182: Downloading [=====================>                             ]  28.07MB/64MB[6B[7A[2K364d19f59f69: Extracting [===========================>                       ]  13.11MB/23.59MB[7B[7A[2K364d19f59f69: Extracting [==========================================>        ]  19.92MB/23.59MB[7B[5A[2Ka348c2a8d946: Downloading [=======>                                           ]  29.16MB/202.7MB[5B[7A[2K364d19f59f69: Extracting [================================================>  ]  23.07MB/23.59MB[7B[7A[2K364d19f59f69: Extracting [==================================================>]  23.59MB/23.59MB[7B[7A[2K364d19f59f69: Pull complete [7B[5A[2Ka348c2a8d946: Downloading [=======>                                           ]  29.69MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [==>                                                ]  2.444MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [=======>                                           ]  30.23MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [===>                                               ]  2.935MB/48.11MB[3B[6A[2K843b1d832182: Downloading [======================>                            ]   28.6MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [=======>                                           ]  30.77MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=======>                                           ]  31.31MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [===>                                               ]  3.427MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [=======>                                           ]  31.84MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [====>                                              ]  3.918MB/48.11MB[3B[6A[2K843b1d832182: Downloading [======================>                            ]  29.15MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [=======>                                           ]  32.39MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [====>                                              ]   4.41MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [========>                                          ]  32.93MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [========>                                          ]  33.47MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [=====>                                             ]  4.901MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [========>                                          ]  34.01MB/202.7MB[5B[6A[2K843b1d832182: Downloading [=======================>                           ]  29.69MB/64MB[6B[3A[2K79c98ca317ce: Downloading [=====>                                             ]  5.393MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [========>                                          ]  34.55MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [========>                                          ]  35.08MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [======>                                            ]  5.884MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [========>                                          ]  35.63MB/202.7MB[5B[6A[2K843b1d832182: Downloading [=======================>                           ]  30.23MB/64MB[6B[3A[2K79c98ca317ce: Downloading [======>                                            ]  6.376MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [========>                                          ]  36.17MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=========>                                         ]  36.71MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [=======>                                           ]  6.867MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [=========>                                         ]  37.25MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=========>                                         ]  37.79MB/202.7MB[5B[6A[2K843b1d832182: Downloading [========================>                          ]  30.76MB/64MB[6B[3A[2K79c98ca317ce: Downloading [=======>                                           ]  7.359MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [=========>                                         ]  38.33MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=========>                                         ]  38.87MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [========>                                          ]   7.85MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [=========>                                         ]  39.41MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [========>                                          ]  8.342MB/48.11MB[3B[6A[2K843b1d832182: Downloading [========================>                          ]   31.3MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [=========>                                         ]  39.95MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=========>                                         ]  40.49MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [=========>                                         ]  8.833MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [==========>                                        ]  41.03MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [=========>                                         ]  9.325MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [==========>                                        ]  41.57MB/202.7MB[5B[6A[2K843b1d832182: Downloading [========================>                          ]  31.84MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [==========>                                        ]  42.11MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [==========>                                        ]  9.816MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [==========>                                        ]  42.65MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==========>                                        ]  43.19MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [==========>                                        ]  10.31MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [==========>                                        ]  43.74MB/202.7MB[5B[6A[2K843b1d832182: Downloading [=========================>                         ]  32.38MB/64MB[6B[3A[2K79c98ca317ce: Downloading [===========>                                       ]   10.8MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [==========>                                        ]  44.28MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===========>                                       ]  44.82MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [===========>                                       ]  11.29MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [===========>                                       ]  45.36MB/202.7MB[5B[6A[2K843b1d832182: Downloading [=========================>                         ]  32.92MB/64MB[6B[3A[2K79c98ca317ce: Downloading [============>                                      ]  11.78MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [===========>                                       ]   45.9MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [============>                                      ]  12.27MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [===========>                                       ]  46.44MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [=============>                                     ]  12.77MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [===========>                                       ]  46.98MB/202.7MB[5B[6A[2K843b1d832182: Downloading [==========================>                        ]  33.46MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [===========>                                       ]  47.51MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [=============>                                     ]  13.26MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [===========>                                       ]  48.05MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [==============>                                    ]  13.75MB/48.11MB[3B[6A[2K843b1d832182: Downloading [==========================>                        ]     34MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [===========>                                       ]  48.59MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [============>                                      ]  49.13MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [==============>                                    ]  14.24MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [============>                                      ]  49.67MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [===============>                                   ]  14.73MB/48.11MB[3B[6A[2K843b1d832182: Downloading [==========================>                        ]  34.54MB/64MB[6B[3A[2K79c98ca317ce: Downloading [===============>                                   ]  15.22MB/48.11MB[3B[3A[2K79c98ca317ce: Downloading [================>                                  ]  15.71MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [============>                                      ]  50.21MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [================>                                  ]  16.21MB/48.11MB[3B[3A[2K79c98ca317ce: Downloading [=================>                                 ]   16.7MB/48.11MB[3B[6A[2K843b1d832182: Downloading [===========================>                       ]  35.08MB/64MB[6B[3A[2K79c98ca317ce: Downloading [=================>                                 ]  17.19MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [============>                                      ]  50.75MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [==================>                                ]  17.68MB/48.11MB[3B[3A[2K79c98ca317ce: Downloading [==================>                                ]  18.18MB/48.11MB[3B[3A[2K79c98ca317ce: Downloading [===================>                               ]  18.67MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [============>                                      ]  51.29MB/202.7MB[5B[6A[2K843b1d832182: Downloading [===========================>                       ]  35.62MB/64MB[6B[3A[2K79c98ca317ce: Downloading [===================>                               ]  19.16MB/48.11MB[3B[3A[2K79c98ca317ce: Downloading [====================>                              ]  19.65MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [============>                                      ]  51.83MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [====================>                              ]  20.15MB/48.11MB[3B[3A[2K79c98ca317ce: Downloading [=====================>                             ]  20.64MB/48.11MB[3B[6A[2K843b1d832182: Downloading [============================>                      ]  36.16MB/64MB[6B[3A[2K79c98ca317ce: Downloading [=====================>                             ]  21.13MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [============>                                      ]  52.37MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [======================>                            ]  21.62MB/48.11MB[3B[3A[2K79c98ca317ce: Downloading [======================>                            ]  22.11MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [=============>                                     ]  52.91MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [=======================>                           ]   22.6MB/48.11MB[3B[6A[2K843b1d832182: Downloading [============================>                      ]   36.7MB/64MB[6B[3A[2K79c98ca317ce: Downloading [=======================>                           ]  23.09MB/48.11MB[3B[3A[2K79c98ca317ce: Downloading [========================>                          ]  23.58MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [=============>                                     ]  53.46MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [=========================>                         ]  24.07MB/48.11MB[3B[6A[2K843b1d832182: Downloading [=============================>                     ]  37.24MB/64MB[6B[3A[2K79c98ca317ce: Downloading [=========================>                         ]  24.56MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [=============>                                     ]     54MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [==========================>                        ]  25.05MB/48.11MB[3B[3A[2K79c98ca317ce: Downloading [==========================>                        ]  25.54MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [=============>                                     ]  54.54MB/202.7MB[5B[6A[2K843b1d832182: Downloading [=============================>                     ]  37.78MB/64MB[6B[3A[2K79c98ca317ce: Downloading [===========================>                       ]  26.03MB/48.11MB[3B[3A[2K79c98ca317ce: Downloading [===========================>                       ]  26.52MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [=============>                                     ]  55.08MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [============================>                      ]     27MB/48.11MB[3B[6A[2K843b1d832182: Downloading [=============================>                     ]  38.32MB/64MB[6B[3A[2K79c98ca317ce: Downloading [============================>                      ]  27.49MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [=============>                                     ]  55.62MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [=============================>                     ]  27.99MB/48.11MB[3B[6A[2K843b1d832182: Downloading [==============================>                    ]  38.87MB/64MB[6B[3A[2K79c98ca317ce: Downloading [=============================>                     ]  28.47MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [=============>                                     ]  56.16MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [==============================>                    ]  28.97MB/48.11MB[3B[3A[2K79c98ca317ce: Downloading [==============================>                    ]  29.46MB/48.11MB[3B[6A[2K843b1d832182: Downloading [==============================>                    ]  39.41MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [=============>                                     ]   56.7MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [===============================>                   ]  29.95MB/48.11MB[3B[3A[2K79c98ca317ce: Downloading [===============================>                   ]  30.44MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [==============>                                    ]  57.23MB/202.7MB[5B[6A[2K843b1d832182: Downloading [===============================>                   ]  39.93MB/64MB[6B[3A[2K79c98ca317ce: Downloading [================================>                  ]  30.93MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [==============>                                    ]  57.77MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [================================>                  ]  31.42MB/48.11MB[3B[6A[2K843b1d832182: Downloading [===============================>                   ]  40.47MB/64MB[6B[3A[2K79c98ca317ce: Downloading [=================================>                 ]  31.91MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [==============>                                    ]  58.31MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [=================================>                 ]  32.41MB/48.11MB[3B[3A[2K79c98ca317ce: Downloading [==================================>                ]   32.9MB/48.11MB[3B[6A[2K843b1d832182: Downloading [================================>                  ]  41.02MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [==============>                                    ]  58.85MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [==================================>                ]  33.39MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [==============>                                    ]  59.39MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [===================================>               ]  33.88MB/48.11MB[3B[6A[2K843b1d832182: Downloading [================================>                  ]  41.56MB/64MB[6B[3A[2K79c98ca317ce: Downloading [===================================>               ]  34.37MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [==============>                                    ]  59.93MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [====================================>              ]  34.86MB/48.11MB[3B[6A[2K843b1d832182: Downloading [================================>                  ]   42.1MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [==============>                                    ]  60.47MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [====================================>              ]  35.35MB/48.11MB[3B[3A[2K79c98ca317ce: Downloading [=====================================>             ]  35.84MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [===============>                                   ]  61.01MB/202.7MB[5B[6A[2K843b1d832182: Downloading [=================================>                 ]  42.64MB/64MB[6B[3A[2K79c98ca317ce: Downloading [=====================================>             ]  36.33MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [===============>                                   ]  61.55MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [======================================>            ]  36.83MB/48.11MB[3B[3A[2K79c98ca317ce: Downloading [======================================>            ]  37.32MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [===============>                                   ]  62.09MB/202.7MB[5B[6A[2K843b1d832182: Downloading [=================================>                 ]  43.18MB/64MB[6B[3A[2K79c98ca317ce: Downloading [=======================================>           ]   37.8MB/48.11MB[3B[3A[2K79c98ca317ce: Downloading [=======================================>           ]   38.3MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [===============>                                   ]  62.63MB/202.7MB[5B[6A[2K843b1d832182: Downloading [==================================>                ]  43.72MB/64MB[6B[3A[2K79c98ca317ce: Downloading [========================================>          ]  38.79MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [===============>                                   ]  63.17MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [========================================>          ]  39.27MB/48.11MB[3B[3A[2K79c98ca317ce: Downloading [=========================================>         ]  39.77MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [===============>                                   ]  63.71MB/202.7MB[5B[6A[2K843b1d832182: Downloading [==================================>                ]  44.26MB/64MB[6B[3A[2K79c98ca317ce: Downloading [=========================================>         ]  40.26MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [===============>                                   ]  64.25MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [==========================================>        ]  40.75MB/48.11MB[3B[6A[2K843b1d832182: Downloading [===================================>               ]   44.8MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [===============>                                   ]  64.79MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [==========================================>        ]  41.23MB/48.11MB[3B[3A[2K79c98ca317ce: Downloading [===========================================>       ]  41.72MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [================>                                  ]  65.33MB/202.7MB[5B[6A[2K843b1d832182: Downloading [===================================>               ]  45.34MB/64MB[6B[3A[2K79c98ca317ce: Downloading [===========================================>       ]  42.21MB/48.11MB[3B[3A[2K79c98ca317ce: Downloading [============================================>      ]   42.7MB/48.11MB[3B[6A[2K843b1d832182: Downloading [===================================>               ]  45.87MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [================>                                  ]  65.87MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [============================================>      ]  43.19MB/48.11MB[3B[3A[2K79c98ca317ce: Downloading [=============================================>     ]  43.69MB/48.11MB[3B[6A[2K843b1d832182: Downloading [====================================>              ]  46.41MB/64MB[6B[3A[2K79c98ca317ce: Downloading [=============================================>     ]  44.18MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [================>                                  ]  66.41MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [==============================================>    ]  44.66MB/48.11MB[3B[6A[2K843b1d832182: Downloading [====================================>              ]  46.95MB/64MB[6B[3A[2K79c98ca317ce: Downloading [==============================================>    ]  45.15MB/48.11MB[3B[5A[2Ka348c2a8d946: Downloading [================>                                  ]  66.96MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [===============================================>   ]  45.64MB/48.11MB[3B[6A[2K843b1d832182: Downloading [=====================================>             ]  47.49MB/64MB[6B[3A[2K79c98ca317ce: Downloading [===============================================>   ]  46.14MB/48.11MB[3B[3A[2K79c98ca317ce: Downloading [================================================>  ]  46.63MB/48.11MB[3B[6A[2K843b1d832182: Downloading [=====================================>             ]  48.03MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [================>                                  ]   67.5MB/202.7MB[5B[3A[2K79c98ca317ce: Downloading [================================================>  ]  47.12MB/48.11MB[3B[3A[2K79c98ca317ce: Downloading [=================================================> ]  47.61MB/48.11MB[3B[6A[2K843b1d832182: Downloading [=====================================>             ]  48.57MB/64MB[6B[3A[2K79c98ca317ce: Downloading [=================================================> ]   48.1MB/48.11MB[3B[3A[2K79c98ca317ce: Verifying Checksum [3B[3A[2K79c98ca317ce: Download complete [3B[5A[2Ka348c2a8d946: Downloading [================>                                  ]  68.04MB/202.7MB[5B[6A[2K843b1d832182: Downloading [======================================>            ]  49.11MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [================>                                  ]  68.58MB/202.7MB[5B[6A[2K843b1d832182: Downloading [======================================>            ]  49.65MB/64MB[6B[2A[2K9e3f5b1f05a1: Downloading [>                                                  ]  13.04kB/1.251MB[2B[2A[2K9e3f5b1f05a1: Downloading [=========>                                         ]  227.6kB/1.251MB[2B[2A[2K9e3f5b1f05a1: Downloading [====================>                              ]  506.1kB/1.251MB[2B[2A[2K9e3f5b1f05a1: Downloading [================================>                  ]    801kB/1.251MB[2B[5A[2Ka348c2a8d946: Downloading [=================>                                 ]  69.12MB/202.7MB[5B[6A[2K843b1d832182: Downloading [=======================================>           ]  50.19MB/64MB[6B[2A[2K9e3f5b1f05a1: Downloading [============================================>      ]  1.112MB/1.251MB[2B[2A[2K9e3f5b1f05a1: Verifying Checksum [2B[2A[2K9e3f5b1f05a1: Download complete [2B[6A[2K843b1d832182: Downloading [=======================================>           ]  50.74MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [=================>                                 ]  69.66MB/202.7MB[5B[6A[2K843b1d832182: Downloading [========================================>          ]  51.28MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [=================>                                 ]   70.2MB/202.7MB[5B[6A[2K843b1d832182: Downloading [========================================>          ]  51.82MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [=================>                                 ]  70.74MB/202.7MB[5B[6A[2K843b1d832182: Downloading [========================================>          ]  52.36MB/64MB[6B[6A[2K843b1d832182: Downloading [=========================================>         ]   52.9MB/64MB[6B[1A[2K10eba7243899: Downloading [==================================================>]     448B/448B[1B[1A[2K10eba7243899: Verifying Checksum [1B[1A[2K10eba7243899: Download complete [1B[5A[2Ka348c2a8d946: Downloading [=================>                                 ]  71.28MB/202.7MB[5B[6A[2K843b1d832182: Downloading [=========================================>         ]  53.44MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [=================>                                 ]  71.82MB/202.7MB[5B[6A[2K843b1d832182: Downloading [==========================================>        ]  53.98MB/64MB[6B[6A[2K843b1d832182: Downloading [==========================================>        ]  54.52MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [=================>                                 ]  72.35MB/202.7MB[5B[6A[2K843b1d832182: Downloading [===========================================>       ]  55.06MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [=================>                                 ]  72.89MB/202.7MB[5B[6A[2K843b1d832182: Downloading [===========================================>       ]   55.6MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [==================>                                ]  73.43MB/202.7MB[5B[6A[2K843b1d832182: Downloading [===========================================>       ]  56.14MB/64MB[6B[6A[2K843b1d832182: Downloading [============================================>      ]  56.68MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [==================>                                ]  73.97MB/202.7MB[5B[6A[2K843b1d832182: Downloading [============================================>      ]  57.22MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [==================>                                ]  74.51MB/202.7MB[5B[6A[2K843b1d832182: Downloading [=============================================>     ]  57.76MB/64MB[6B[6A[2K843b1d832182: Downloading [=============================================>     ]   58.3MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [==================>                                ]  75.05MB/202.7MB[5B[6A[2K843b1d832182: Downloading [=============================================>     ]  58.84MB/64MB[6B[6A[2K843b1d832182: Downloading [==============================================>    ]  59.38MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [==================>                                ]  75.59MB/202.7MB[5B[6A[2K843b1d832182: Downloading [==============================================>    ]  59.91MB/64MB[6B[6A[2K843b1d832182: Downloading [===============================================>   ]  60.45MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [==================>                                ]  76.13MB/202.7MB[5B[6A[2K843b1d832182: Downloading [===============================================>   ]  60.99MB/64MB[6B[6A[2K843b1d832182: Downloading [================================================>  ]  61.53MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [==================>                                ]  76.68MB/202.7MB[5B[6A[2K843b1d832182: Downloading [================================================>  ]  62.07MB/64MB[6B[6A[2K843b1d832182: Downloading [================================================>  ]  62.61MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [===================>                               ]  77.22MB/202.7MB[5B[6A[2K843b1d832182: Downloading [=================================================> ]  63.15MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [===================>                               ]  77.76MB/202.7MB[5B[6A[2K843b1d832182: Downloading [=================================================> ]  63.69MB/64MB[6B[6A[2K843b1d832182: Verifying Checksum [6B[6A[2K843b1d832182: Download complete [6B[6A[2K843b1d832182: Extracting [>                                                  ]  557.1kB/64MB[6B[5A[2Ka348c2a8d946: Downloading [===================>                               ]   78.3MB/202.7MB[5B[6A[2K843b1d832182: Extracting [======>                                            ]  8.356MB/64MB[6B[6A[2K843b1d832182: Extracting [==========>                                        ]  13.93MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [===================>                               ]  78.84MB/202.7MB[5B[6A[2K843b1d832182: Extracting [=============>                                     ]  16.71MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [===================>                               ]  79.37MB/202.7MB[5B[6A[2K843b1d832182: Extracting [===============>                                   ]   19.5MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [===================>                               ]  79.91MB/202.7MB[5B[6A[2K843b1d832182: Extracting [=====================>                             ]   27.3MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [===================>                               ]  80.99MB/202.7MB[5B[6A[2K843b1d832182: Extracting [=========================>                         ]  32.87MB/64MB[6B[6A[2K843b1d832182: Extracting [============================>                      ]  36.21MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [====================>                              ]  82.07MB/202.7MB[5B[6A[2K843b1d832182: Extracting [==============================>                    ]  38.99MB/64MB[6B[6A[2K843b1d832182: Extracting [===============================>                   ]  40.67MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [====================>                              ]  83.14MB/202.7MB[5B[6A[2K843b1d832182: Extracting [=================================>                 ]  43.45MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [====================>                              ]  83.68MB/202.7MB[5B[6A[2K843b1d832182: Extracting [==================================>                ]  44.56MB/64MB[6B[6A[2K843b1d832182: Extracting [====================================>              ]  47.35MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [====================>                              ]  84.76MB/202.7MB[5B[6A[2K843b1d832182: Extracting [=====================================>             ]  48.46MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [=====================>                             ]   85.3MB/202.7MB[5B[6A[2K843b1d832182: Extracting [========================================>          ]  51.81MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [=====================>                             ]  85.84MB/202.7MB[5B[6A[2K843b1d832182: Extracting [===========================================>       ]  56.26MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [=====================>                             ]  86.37MB/202.7MB[5B[6A[2K843b1d832182: Extracting [==============================================>    ]  59.05MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [=====================>                             ]  87.44MB/202.7MB[5B[6A[2K843b1d832182: Extracting [===============================================>   ]  61.28MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [=====================>                             ]  87.98MB/202.7MB[5B[6A[2K843b1d832182: Extracting [=================================================> ]   63.5MB/64MB[6B[5A[2Ka348c2a8d946: Downloading [=====================>                             ]  89.07MB/202.7MB[5B[6A[2K843b1d832182: Extracting [==================================================>]     64MB/64MB[6B[6A[2K843b1d832182: Pull complete [6B[5A[2Ka348c2a8d946: Downloading [======================>                            ]  90.15MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [======================>                            ]  90.69MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [======================>                            ]  91.76MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [======================>                            ]  92.31MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=======================>                           ]  93.37MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=======================>                           ]  94.45MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=======================>                           ]  94.99MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=======================>                           ]  96.07MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=======================>                           ]  96.61MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [========================>                          ]  97.69MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [========================>                          ]  98.77MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [========================>                          ]  99.31MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [========================>                          ]  100.4MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=========================>                         ]  101.5MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=========================>                         ]  102.5MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=========================>                         ]  103.1MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=========================>                         ]  104.2MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=========================>                         ]  105.2MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==========================>                        ]  105.8MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==========================>                        ]  106.3MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==========================>                        ]  107.4MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==========================>                        ]  108.5MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==========================>                        ]    109MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===========================>                       ]  110.1MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===========================>                       ]  110.6MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===========================>                       ]  111.7MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===========================>                       ]  112.2MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===========================>                       ]  113.3MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [============================>                      ]  113.8MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [============================>                      ]  114.4MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [============================>                      ]  114.9MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [============================>                      ]  115.5MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [============================>                      ]    116MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [============================>                      ]  116.5MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [============================>                      ]  117.1MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=============================>                     ]  117.6MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=============================>                     ]  118.1MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=============================>                     ]  118.7MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=============================>                     ]  119.2MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=============================>                     ]  119.8MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=============================>                     ]  120.3MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=============================>                     ]  120.9MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=============================>                     ]  121.4MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==============================>                    ]  121.9MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==============================>                    ]  122.5MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==============================>                    ]    123MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==============================>                    ]  123.5MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==============================>                    ]  124.1MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==============================>                    ]  124.6MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==============================>                    ]  125.1MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===============================>                   ]  125.7MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===============================>                   ]  126.2MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===============================>                   ]  126.8MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===============================>                   ]  127.3MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===============================>                   ]  128.4MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===============================>                   ]  129.4MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [================================>                  ]    130MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [================================>                  ]  130.5MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [================================>                  ]  131.1MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [================================>                  ]  132.1MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [================================>                  ]  133.2MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=================================>                 ]  133.8MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=================================>                 ]  134.3MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=================================>                 ]  134.8MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=================================>                 ]  135.9MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=================================>                 ]    137MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==================================>                ]  138.1MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==================================>                ]  138.6MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==================================>                ]  139.7MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==================================>                ]  140.2MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==================================>                ]  141.3MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===================================>               ]  142.4MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===================================>               ]  142.9MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===================================>               ]  143.4MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===================================>               ]  144.5MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===================================>               ]  145.1MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===================================>               ]  145.6MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [====================================>              ]  146.1MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [====================================>              ]  146.7MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [====================================>              ]  147.2MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [====================================>              ]  147.7MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [====================================>              ]  148.3MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [====================================>              ]  148.8MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [====================================>              ]  149.4MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [====================================>              ]  149.9MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=====================================>             ]    151MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=====================================>             ]  151.5MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=====================================>             ]    152MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=====================================>             ]  152.6MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=====================================>             ]  153.6MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [======================================>            ]  154.2MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [======================================>            ]  154.7MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [======================================>            ]  155.3MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [======================================>            ]  155.8MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [======================================>            ]  156.3MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [======================================>            ]  156.9MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [======================================>            ]  157.4MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=======================================>           ]  158.5MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=======================================>           ]    159MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=======================================>           ]  159.6MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=======================================>           ]  160.1MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=======================================>           ]  160.6MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=======================================>           ]  161.2MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=======================================>           ]  161.7MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [========================================>          ]  162.3MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [========================================>          ]  162.8MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [========================================>          ]  163.3MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [========================================>          ]  163.9MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [========================================>          ]  164.4MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [========================================>          ]  164.9MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [========================================>          ]  165.5MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [========================================>          ]    166MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=========================================>         ]  166.6MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=========================================>         ]  167.1MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=========================================>         ]  167.6MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=========================================>         ]  168.2MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=========================================>         ]  168.7MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=========================================>         ]  169.3MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=========================================>         ]  169.8MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==========================================>        ]  170.9MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==========================================>        ]  171.4MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==========================================>        ]  171.9MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==========================================>        ]  172.5MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==========================================>        ]  173.5MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==========================================>        ]  174.1MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===========================================>       ]  174.6MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===========================================>       ]  175.2MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===========================================>       ]  175.7MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===========================================>       ]  176.3MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===========================================>       ]  176.8MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===========================================>       ]  177.3MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===========================================>       ]  177.9MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [============================================>      ]  178.4MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [============================================>      ]  178.9MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [============================================>      ]  179.5MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [============================================>      ]    180MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [============================================>      ]  180.6MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [============================================>      ]  181.1MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [============================================>      ]  181.6MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [============================================>      ]  182.2MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=============================================>     ]  182.7MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=============================================>     ]  183.2MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=============================================>     ]  183.8MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=============================================>     ]  184.3MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=============================================>     ]  185.4MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=============================================>     ]  185.9MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==============================================>    ]  186.5MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==============================================>    ]    187MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==============================================>    ]  187.6MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==============================================>    ]  188.1MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==============================================>    ]  188.6MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==============================================>    ]  189.2MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==============================================>    ]  189.7MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [==============================================>    ]  190.3MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===============================================>   ]  190.8MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===============================================>   ]  191.3MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===============================================>   ]  191.9MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===============================================>   ]  192.4MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===============================================>   ]  192.9MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===============================================>   ]  193.5MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [===============================================>   ]    194MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [================================================>  ]  194.6MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [================================================>  ]  195.1MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [================================================>  ]  195.6MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [================================================>  ]  196.2MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [================================================>  ]  196.7MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [================================================>  ]  197.3MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [================================================>  ]  197.8MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [================================================>  ]  198.3MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=================================================> ]  198.9MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=================================================> ]  199.4MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=================================================> ]  199.9MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=================================================> ]  200.5MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=================================================> ]    201MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=================================================> ]  201.6MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=================================================> ]  202.1MB/202.7MB[5B[5A[2Ka348c2a8d946: Downloading [=================================================> ]  202.6MB/202.7MB[5B[5A[2Ka348c2a8d946: Verifying Checksum [5B[5A[2Ka348c2a8d946: Download complete [5B[5A[2Ka348c2a8d946: Extracting [>                                                  ]  557.1kB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [=>                                                 ]  7.799MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [===>                                               ]  16.15MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [====>                                              ]  20.05MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [=====>                                             ]  20.61MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [=====>                                             ]  21.73MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [=====>                                             ]  22.84MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [=====>                                             ]   23.4MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [======>                                            ]  24.51MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [======>                                            ]  25.62MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [======>                                            ]  26.74MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [=======>                                           ]  28.41MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [=======>                                           ]  30.08MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [=========>                                         ]  36.77MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [==========>                                        ]  44.01MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [============>                                      ]  49.58MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [=============>                                     ]  56.26MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [===============>                                   ]   63.5MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [==================>                                ]  72.97MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [====================>                              ]  81.89MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [======================>                            ]   90.8MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [========================>                          ]   98.6MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [=========================>                         ]  105.3MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [===========================>                       ]  112.5MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [=============================>                     ]  119.2MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [===============================>                   ]    127MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [=================================>                 ]  134.8MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [===================================>               ]  142.6MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [====================================>              ]  147.6MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [======================================>            ]    156MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [=======================================>           ]  160.4MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [=======================================>           ]  161.5MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [=========================================>         ]  167.7MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [==========================================>        ]  173.8MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [============================================>      ]  179.9MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [=============================================>     ]  183.3MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [==============================================>    ]  186.6MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [==============================================>    ]  188.8MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [===============================================>   ]  192.2MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [================================================>  ]  195.5MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [=================================================> ]  198.9MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [=================================================> ]    200MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [=================================================> ]  201.1MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [=================================================> ]  202.2MB/202.7MB[5B[5A[2Ka348c2a8d946: Extracting [==================================================>]  202.7MB/202.7MB[5B[5A[2Ka348c2a8d946: Pull complete [5B[4A[2Kd51f64f1b1d9: Extracting [==================================================>]  3.322kB/3.322kB[4B[4A[2Kd51f64f1b1d9: Pull complete [4B[3A[2K79c98ca317ce: Extracting [>                                                  ]  491.5kB/48.11MB[3B[3A[2K79c98ca317ce: Extracting [=========>                                         ]  8.847MB/48.11MB[3B[3A[2K79c98ca317ce: Extracting [================>                                  ]  16.22MB/48.11MB[3B[3A[2K79c98ca317ce: Extracting [=========================>                         ]  24.58MB/48.11MB[3B[3A[2K79c98ca317ce: Extracting [==================================>                ]  32.93MB/48.11MB[3B[3A[2K79c98ca317ce: Extracting [======================================>            ]  37.36MB/48.11MB[3B[3A[2K79c98ca317ce: Extracting [========================================>          ]  38.83MB/48.11MB[3B[3A[2K79c98ca317ce: Extracting [=========================================>         ]   40.3MB/48.11MB[3B[3A[2K79c98ca317ce: Extracting [===========================================>       ]  41.78MB/48.11MB[3B[3A[2K79c98ca317ce: Extracting [============================================>      ]  43.25MB/48.11MB[3B[3A[2K79c98ca317ce: Extracting [==============================================>    ]  44.73MB/48.11MB[3B[3A[2K79c98ca317ce: Extracting [===============================================>   ]  45.71MB/48.11MB[3B[3A[2K79c98ca317ce: Extracting [================================================>  ]  46.69MB/48.11MB[3B[3A[2K79c98ca317ce: Extracting [=================================================> ]  47.68MB/48.11MB[3B[3A[2K79c98ca317ce: Extracting [==================================================>]  48.11MB/48.11MB[3B[3A[2K79c98ca317ce: Pull complete [3B[2A[2K9e3f5b1f05a1: Extracting [=>                                                 ]  32.77kB/1.251MB[2B[2A[2K9e3f5b1f05a1: Extracting [==================================================>]  1.251MB/1.251MB[2B[2A[2K9e3f5b1f05a1: Pull complete [2B[1A[2K10eba7243899: Extracting [==================================================>]     448B/448B[1B[1A[2K10eba7243899: Extracting [==================================================>]     448B/448B[1B[1A[2K10eba7243899: Pull complete [1BDigest: sha256:48db4f6ea21d134be744207225753a1730c4bc1b4cdf836d44511c36bf0e34d7
+Status: Downloaded newer image for node:20
+[?2004hroot@5841c656f543:/# mkdir user/src c/app
+[?2004lmkdir: cannot create directory 'user/src/app': No such file or directory
+[?2004hroot@5841c656f543:/# mkdir user/src/app[1P
+[?2004l[?2004hroot@5841c656f543:/# docker container cp index.js is  usr/src/appindex.js [1@h[1@e[1@l[1@l[1@o[1@-[1@n[1@o[1@d[1@e[1@:[1@/
+[?2004lbash: docker: command not found
+[?2004hroot@5841c656f543:/# exit
+[?2004lexit
+sh-3.2# docker container cp index.js hello-node:/usr/src/app
+Successfully copied 2.05kB to hello-node:/usr/src/app
+sh-3.2# docker start hello.[K-node bash
+hello-node
+Error response from daemon: No such container: bash
+Error: failed to start containers: bash
+sh-3.2# docker start hello-node bash[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K
+hello-node
+sh-3.2# docker start hello-node bash[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcat usr/[K/src/app/index.js
+cat: usr/src/app/index.js: No such file or directory
+sh-3.2# cat usr/src/app/index.js[K[K[K[K[K[K[K[K[C[K[1P usr/src/app[C[C[C[C[C[C[C[C[C[C[1P usr/src/app[C[C[C[C[C[C[C[C[Cd usr/src/app[C[C[C[C[C[C[C[C[C[C
+sh: cd: usr/src/app: No such file or directory
+sh-3.2# cd usr/src/app[K[K[K[K[K[K[K[K[K[K[K[K[K[Kls -la[K[K[K[K[K[Kcat usr/src/app/index.js[C[C[C[C[C[C[C[C[1Pdocker start hello-node-hello-nodeihello-nodethello-node hello-node
+unknown shorthand flag: 't' in -t
+See 'docker start --help'.
+sh-3.2# docker start -it hello-node[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kps -a
+CONTAINER ID   IMAGE              COMMAND                  CREATED          STATUS                        PORTS     NAMES
+5841c656f543   node:20            "docker-entrypoint.s…"   3 minutes ago    Up About a minute                       hello-node
+2876534b398d   hello-node-world   "sh"                     12 minutes ago   Exited (127) 11 minutes ago             stoic_tu
+b5c39f10432c   hello-world        "/hello"                 28 minutes ago   Exited (0) 22 minutes ago               reverent_chaplygin
+sh-3.2# docker ps -a[K[K[K[K[K[K[K[K[K[K[K[Kdocker start -i hello-world
+Error response from daemon: No such container: hello-world
+sh-3.2# docker start -i hello-world[C[1P[1P[1P[1P[1P[1@r[1@u[1@n[C[C[Ct hello-world[C[C[C[C[C[C[C[C[C[C[C[C bash
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "bash": executable file not found in $PATH: unknown.
+sh-3.2# docker run -it hello-world bash[1@c[1@o[1@n[1@t[1@a[1@i[1@n[1@e[C[1@r[1@ 
+docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "bash": executable file not found in $PATH: unknown.
+sh-3.2# cd[K[Kls -la
+total 8
+drwxr-xr-x   6 root  staff  192 Sep 14 19:46 .
+drwxr-xr-x   4 root  staff  128 Sep  7 11:32 ..
+drwxr-xr-x  13 root  staff  416 Sep  7 11:38 .git
+-rw-r--r--   1 root  staff   28 Sep 14 19:47 index.js
+drwxr-xr-x   7 root  staff  224 Sep 14 19:34 script-answers
+drwxr-xr-x   5 root  staff  160 Sep  7 11:32 todo-app
+sh-3.2# docker kill helll[Ko-world
+Error response from daemon: cannot kill container: hello-world: No such container: hello-world
+sh-3.2# docker kill hello-world[C[C[C[C[C[C[C[Cls -la[Kdocker container run -it hello-world bash[1P bash[1P bash[1P bash[1P bash[1P bash[1P bash[1P bash[1P bash[1P bash[1P bash[1P bashr bashe bashv bashe bashr bashe bashn bash[C bash[1Pbash[1P bash[1P bash[1P bash[1P bash[1P bash[1P bash[1P bashh bashe bashl bashl basho bash- bashn basho bashd bashe bash
+Unable to find image 'hello-node:latest' locally
+2024/09/14 19:59:07 must use ASL logging (which requires CGO) if running as root
+docker: Error response from daemon: pull access denied for hello-node, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+sh-3.2# cat usr/src/appinde[K[K[K[K/index-[K.js
+cat: usr/src/app/index.js: No such file or directory
+sh-3.2# cd [K[K[Kls -la
+total 8
+drwxr-xr-x   6 root  staff  192 Sep 14 19:46 .
+drwxr-xr-x   4 root  staff  128 Sep  7 11:32 ..
+drwxr-xr-x  13 root  staff  416 Sep  7 11:38 .git
+-rw-r--r--   1 root  staff   28 Sep 14 19:47 index.js
+drwxr-xr-x   7 root  staff  224 Sep 14 19:34 script-answers
+drwxr-xr-x   5 root  staff  160 Sep  7 11:32 todo-app
+sh-3.2# ls -lacat usr/src/app/index.js[C[C[C[C[C[C[C[Cdocker container run -it hello-node bash[C[C[C[C[C[C[C[C[16Pcat usr/src/app/index.js[C[C[C[C[C[C[C[Cls -la[K[Kdocker container ki[K[K[K[K[K[K[K[K[K[K[K[Kjukk [K[K[K[K[Kkill hello-node
+hello-node
+sh-3.2# docker start -i hello-node
+[?2004hroot@5841c656f543:/# cat use r/st rc/app/index.js
+[?2004lconsole.log('Hello, World')
+[?2004hroot@5841c656f543:/# exit
+[?2004lexit
+sh-3.2# touch Dockerfile
+sh-3.2# docker run node:20 ls
+bin
+boot
+dev
+etc
+home
+lib
+media
+mnt
+opt
+proc
+root
+run
+sbin
+srv
+sys
+tmp
+usr
+var
+sh-3.2# docker build -t fs-hello-world . [K
+[1A[1B[0G[?25l[+] Building 0.0s (0/1)                                                                              docker:desktop-linux
+[?25h[1A[0G[?25l[+] Building 0.1s (8/8)                                                                              docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                 0.0s
+[0m[34m => => transferring dockerfile: 118B                                                                                 0.0s
+[0m => WARN: JSONArgsRecommended: JSON arguments recommended for CMD to prevent unintended behavior related to OS sign  0.0s
+[34m => [internal] load metadata for docker.io/library/node:20                                                           0.0s
+[0m[34m => [internal] load .dockerignore                                                                                    0.0s
+[0m[34m => => transferring context: 2B                                                                                      0.0s
+[0m[34m => [1/3] FROM docker.io/library/node:20                                                                             0.0s
+[0m[34m => [internal] load build context                                                                                    0.0s
+[0m[34m => => transferring context: 63B                                                                                     0.0s
+[0m[34m => [2/3] WORKDIR /usr/src/app                                                                                       0.0s
+[0m[34m => [3/3] COPY ./index.js ./index.js                                                                                 0.0s
+[0m[34m => exporting to image                                                                                               0.0s
+[0m[34m => => exporting layers                                                                                              0.0s
+[0m[34m => => writing image sha256:ce638ce69f590bb5ef33c2d5dcf96bcc7769f6ea88c29cabb525d6884aefa476                         0.0s
+[0m[34m => => naming to docker.io/library/fs-hello-world                                                                    0.0s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.1s (8/8) FINISHED                                                                     docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                 0.0s
+[0m[34m => => transferring dockerfile: 118B                                                                                 0.0s
+[0m => WARN: JSONArgsRecommended: JSON arguments recommended for CMD to prevent unintended behavior related to OS sign  0.0s
+[34m => [internal] load metadata for docker.io/library/node:20                                                           0.0s
+[0m[34m => [internal] load .dockerignore                                                                                    0.0s
+[0m[34m => => transferring context: 2B                                                                                      0.0s
+[0m[34m => [1/3] FROM docker.io/library/node:20                                                                             0.0s
+[0m[34m => [internal] load build context                                                                                    0.0s
+[0m[34m => => transferring context: 63B                                                                                     0.0s
+[0m[34m => [2/3] WORKDIR /usr/src/app                                                                                       0.0s
+[0m[34m => [3/3] COPY ./index.js ./index.js                                                                                 0.0s
+[0m[34m => exporting to image                                                                                               0.0s
+[0m[34m => => exporting layers                                                                                              0.0s
+[0m[34m => => writing image sha256:ce638ce69f590bb5ef33c2d5dcf96bcc7769f6ea88c29cabb525d6884aefa476                         0.0s
+[0m[34m => => naming to docker.io/library/fs-hello-world                                                                    0.0s
+[0m[?25h
+ [33m1 warning found (use docker --debug to expand):
+[0m - JSONArgsRecommended: JSON arguments recommended for CMD to prevent unintended behavior related to OS signals (line 7)
+[1m
+What's next:[0m
+    View a summary of image vulnerabilities and recommendations → [36mdocker scout quickview [0m
+sh-3.2# docker run fs-hello-world
+Hello, World
+sh-3.2# docker image ls
+REPOSITORY         TAG       IMAGE ID       CREATED         SIZE
+fs-hello-world     latest    ce638ce69f59   2 minutes ago   1.09GB
+hello-node-world   latest    943de1c5c1a5   19 hours ago    239MB
+node               20        c264ebbe8278   3 weeks ago     1.09GB
+ubuntu             latest    1a799365aa63   6 weeks ago     101MB
+hello-world        latest    ee301c921b8a   16 months ago   9.14kB
+sh-3.2# docker image ls[K[K--help
+
+Usage:  docker image COMMAND
+
+Manage images
+
+Commands:
+  build       Build an image from a Dockerfile
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Display detailed information on one or more images
+  load        Load an image from a tar archive or STDIN
+  ls          List images
+  prune       Remove unused images
+  pull        Download an image from a registry
+  push        Upload an image to a registry
+  rm          Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+
+Run 'docker image COMMAND --help' for more information on a command.
+sh-3.2# docker run -it fs-hello-wp[Korld sh
+# ls
+index.js
+# exi   rm index.js
+# ls
+# cd ..
+# ls
+app
+# cd app
+# ls
+# npx express-generator
+[1G[0K\[1G[0K|[1G[0K/[1G[0K[1G[0JNeed to install the following packages:
+express-generator@4.16.1
+Ok to proceed? (y) [20Gy
+
+[1G[0K\[1G[0K|[1G[0K/[1G[0K-[1G[0K\[1G[0K[1mnpm[22m [33mwarn[39m [94mdeprecated[39m mkdirp@0.5.1: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
+[1G[0K\[1G[0K|[1G[0K/[1G[0K[31m[39m
+[31m  warning: the default view engine will not be jade in future releases[39m
+[31m  warning: use `--view=jade' or `--help' for additional options[39m
+[31m[39m
+
+   [36mcreate[0m : public/
+   [36mcreate[0m : public/javascripts/
+   [36mcreate[0m : public/images/
+   [36mcreate[0m : public/stylesheets/
+   [36mcreate[0m : public/stylesheets/style.css
+   [36mcreate[0m : routes/
+   [36mcreate[0m : routes/index.js
+   [36mcreate[0m : routes/users.js
+   [36mcreate[0m : views/
+   [36mcreate[0m : views/error.jade
+   [36mcreate[0m : views/index.jade
+   [36mcreate[0m : views/layout.jade
+   [36mcreate[0m : app.js
+   [36mcreate[0m : package.json
+   [36mcreate[0m : bin/
+   [36mcreate[0m : bin/www
+
+   install dependencies:
+     $ npm install
+
+   run the app:
+     $ DEBUG=app:* npm start
+
+[1G[0K\[1G[0K[1mnpm[22m [96mnotice[39m
+[1mnpm[22m [96mnotice[39m New [36mpatch[39m version of npm available! [36m10.8.2[39m -> [34m10.8.3[39m
+[1mnpm[22m [96mnotice[39m Changelog: [34mhttps://github.com/npm/cli/releases/tag/v10.8.3[39m
+[1mnpm[22m [96mnotice[39m To update run: [4mnpm install -g npm@10.8.3[24m
+[1mnpm[22m [96mnotice[39m
+[1G[0K\[1G[0K# DEBUG=playgroud nd:* npm start
+
+> app@0.0.0 start
+> node ./bin/www
+
+[1G[0Knode:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module 'http-errors'
+Require stack:
+- /usr/src/app/app.js
+- /usr/src/app/bin/www
+[90m    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)[39m
+[90m    at Module._load (node:internal/modules/cjs/loader:1051:27)[39m
+[90m    at Module.require (node:internal/modules/cjs/loader:1311:19)[39m
+[90m    at require (node:internal/modules/helpers:179:18)[39m
+    at Object.<anonymous> [90m(/usr/src/app/[39mapp.js:1:19[90m)[39m
+[90m    at Module._compile (node:internal/modules/cjs/loader:1469:14)[39m
+[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)[39m
+[90m    at Module.load (node:internal/modules/cjs/loader:1288:32)[39m
+[90m    at Module._load (node:internal/modules/cjs/loader:1104:12)[39m
+[90m    at Module.require (node:internal/modules/cjs/loader:1311:19)[39m {
+  code: [32m'MODULE_NOT_FOUND'[39m,
+  requireStack: [ [32m'/usr/src/app/app.js'[39m, [32m'/usr/src/app/bin/www'[39m ]
+}
+
+Node.js v20.17.0
+[1G[0K\[1G[0K# DEBUG=app:* npm start
+
+> app@0.0.0 start
+> node ./bin/www
+
+[1G[0Knode:internal/modules/cjs/loader:1228
+  throw err;
+  ^
+
+Error: Cannot find module 'http-errors'
+Require stack:
+- /usr/src/app/app.js
+- /usr/src/app/bin/www
+[90m    at Module._resolveFilename (node:internal/modules/cjs/loader:1225:15)[39m
+[90m    at Module._load (node:internal/modules/cjs/loader:1051:27)[39m
+[90m    at Module.require (node:internal/modules/cjs/loader:1311:19)[39m
+[90m    at require (node:internal/modules/helpers:179:18)[39m
+    at Object.<anonymous> [90m(/usr/src/app/[39mapp.js:1:19[90m)[39m
+[90m    at Module._compile (node:internal/modules/cjs/loader:1469:14)[39m
+[90m    at Module._extensions..js (node:internal/modules/cjs/loader:1548:10)[39m
+[90m    at Module.load (node:internal/modules/cjs/loader:1288:32)[39m
+[90m    at Module._load (node:internal/modules/cjs/loader:1104:12)[39m
+[90m    at Module.require (node:internal/modules/cjs/loader:1311:19)[39m {
+  code: [32m'MODULE_NOT_FOUND'[39m,
+  requireStack: [ [32m'/usr/src/app/app.js'[39m, [32m'/usr/src/app/bin/www'[39m ]
+}
+
+Node.js v20.17.0
+[1G[0K\[1G[0K# npm install
+[1G[0K\[1G[0K|[1G[0K/[1G[0K-[1G[0K\[1G[0K|[1G[0K/[1G[0K-[1G[0K\[1G[0K|[1G[0K/[1G[0K-[1G[0K\[1G[0K|[1G[0K/[1G[0K-[1G[0K\[1G[0K|[1G[0K/[1G[0K-[1G[0K\[1G[0K|[1G[0K/[1G[0K-[1G[0K\[1G[0K|[1G[0K/[1G[0K-[1G[0K\[1G[0K|[1G[0K/[1G[0K-[1G[0K\[1G[0K|[1G[0K/[1G[0K-[1G[0K\[1G[0K|[1G[0K/[1G[0K[1mnpm[22m [33mwarn[39m [94mdeprecated[39m transformers@2.1.0: Deprecated, use jstransformer
+[1G[0K/[1G[0K[1mnpm[22m [33mwarn[39m [94mdeprecated[39m constantinople@3.0.2: Please update to at least constantinople 3.1.1
+[1G[0K-[1G[0K\[1G[0K[1mnpm[22m [33mwarn[39m [94mdeprecated[39m jade@1.11.0: Jade has been renamed to pug, please install the latest version of pug instead of jade
+[1G[0K\[1G[0K|[1G[0K/[1G[0K-[1G[0K
+added 99 packages, and audited 100 packages in 6s
+[1G[0K-[1G[0K
+[1G[0K-[1G[0K1 package is looking for funding
+[1G[0K-[1G[0K  run `npm fund` for details
+[1G[0K-[1G[0K
+[31m[1m11[22m[39m vulnerabilities (1 [1mlow[22m, 2 [33m[1mmoderate[22m[39m, 5 [31m[1mhigh[22m[39m, 3 [35m[1mcritical[22m[39m)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+[1G[0K-[1G[0K# ^[[A^[[A^[[A            DEBUG=app:* npm start
+
+> app@0.0.0 start
+> node ./bin/www
+
+[1G[0K  [35;1mapp:server [0mListening on port 3000 [35m+0ms[0m
+exit
+^C
+# ls
+app.js	bin  node_modules  package-lock.json  package.json  public  routes  views
+# exit
+sh-3.2# docker container --help
+
+Usage:  docker container COMMAND
+
+Manage containers
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  exec        Execute a command in a running container
+  export      Export a container's filesystem as a tar archive
+  inspect     Display detailed information on one or more containers
+  kill        Kill one or more running containers
+  logs        Fetch the logs of a container
+  ls          List containers
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  prune       Remove all stopped containers
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  run         Create and run a new container from an image
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker container COMMAND --help' for more information on a command.
+sh-3.2# docker container --helprun -it fs-hello-world sh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9Pcontainer --help[K[K[K[K[K[Krm [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kdocker run -it fs-hello-world sh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[13Pimage --help[4Plsrun fs-hello-world[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cbuild -t fs-hello-world .[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Prun fs-hello-world[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[10Pimage ls--helprun -it fs-hello-world sh[C[C[C[C[C[C[C[C[Knpx express-generator
+[1G[0K⠙[1G[0K⠹[1G[0K⠸[1G[0K⠼[1G[0K[1G[0JNeed to install the following packages:
+express-generator@4.16.1
+Ok to proceed? (y) [20Gy
+
+[1G[0K⠙[1G[0K⠹[1G[0K⠸[1G[0K⠼[1G[0K⠴[1G[0K⠦[1G[0K⠧[1G[0K⠇[1G[0K⠏[1G[0K⠋[1G[0K⠙[1G[0K⠹[1G[0K⠸[1G[0K⠼[1G[0K⠴[1G[0K[1mnpm[22m [33mwarn[39m [94mdeprecated[39m mkdirp@0.5.1: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
+[1G[0K⠴[1G[0K⠦[1G[0K⠧[1G[0K[31m[39m
+[31m  warning: the default view engine will not be jade in future releases[39m
+[31m  warning: use `--view=jade' or `--help' for additional options[39m
+[31m[39m
+[1G[0Jdestination is not empty, continue? [y/N] [43Gn[1G[0Jdestination is not empty, continue? [y/N] [43GN
+[31maborting[39m
+[1G[0K⠙[1G[0Ksh-3.2# npm install
+[1mnpm[22m [31merror[39m [94mcode[39m ENOENT
+[1mnpm[22m [31merror[39m [94msyscall[39m open
+[1mnpm[22m [31merror[39m [94mpath[39m /Users/erkkafiner/Projects/part12-containers-applications/package.json
+[1mnpm[22m [31merror[39m [94merrno[39m [33m-2[39m
+[1mnpm[22m [31merror[39m [94menoent[39m Could not read package.json: Error: ENOENT: no such file or directory, open '/Users/erkkafiner/Projects/part12-containers-applications/package.json'
+[1mnpm[22m [31merror[39m [94menoent[39m This is related to npm not being able to find a file.
+[1mnpm[22m [31merror[39m [94menoent[39m
+[1mnpm[22m [31merror[39m A complete log of this run can be found in: /Users/erkkafiner/.npm/_logs/2024-09-15T11_51_13_655Z-debug-0.log
+[1G[0Ksh-3.2# npm install mkdirp@latest
+[1G[0K⠙[1G[0K⠹[1G[0K⠸[1G[0K
+added 1 package in 397ms
+[1G[0K⠸[1G[0K
+[1G[0K⠸[1G[0K1 package is looking for funding
+[1G[0K⠸[1G[0K  run `npm fund` for details
+[1G[0K⠸[1G[0Ksh-3.2# npx express-generator -y
+[1G[0K⠙[1G[0K⠹[1G[0K
+  Usage: express [options] [dir]
+
+  Options:
+
+        --version        output the version number
+    -e, --ejs            add ejs engine support
+        --pug            add pug engine support
+        --hbs            add handlebars engine support
+    -H, --hogan          add hogan.js engine support
+    -v, --view <engine>  add view <engine> support (dust|ejs|hbs|hjs|jade|pug|twig|vash) (defaults to jade)
+        --no-view        use static html instead of view engine
+    -c, --css <engine>   add stylesheet <engine> support (less|stylus|compass|sass) (defaults to plain css)
+        --git            add .gitignore
+    -f, --force          force on non-empty directory
+    -h, --help           output usage information
+[31m[39m
+[31m  error: unknown option `-y'[39m
+[31m[39m
+[1G[0K⠙[1G[0Ksh-3.2# npx express-generator -y[K[K[K
+[1G[0K⠙[1G[0K⠹[1G[0K[31m[39m
+[31m  warning: the default view engine will not be jade in future releases[39m
+[31m  warning: use `--view=jade' or `--help' for additional options[39m
+[31m[39m
+[1G[0Jdestination is not empty, continue? [y/N] [43Gy
+
+   [36mcreate[0m : public/
+   [36mcreate[0m : public/javascripts/
+   [36mcreate[0m : public/images/
+   [36mcreate[0m : public/stylesheets/
+   [36mcreate[0m : public/stylesheets/style.css
+   [36mcreate[0m : routes/
+   [36mcreate[0m : routes/index.js
+   [36mcreate[0m : routes/users.js
+   [36mcreate[0m : views/
+   [36mcreate[0m : views/error.jade
+   [36mcreate[0m : views/index.jade
+   [36mcreate[0m : views/layout.jade
+   [36mcreate[0m : app.js
+   [36mcreate[0m : package.json
+   [36mcreate[0m : bin/
+   [36mcreate[0m : bin/www
+
+   install dependencies:
+     $ npm install
+
+   run the app:
+     $ DEBUG=part12-containers-applications:* npm start
+
+[1G[0K⠙[1G[0Ksh-3.2# npm install
+[1G[0K⠙[1G[0K⠹[1G[0K⠸[1G[0K⠼[1G[0K⠴[1G[0K⠦[1G[0K⠧[1G[0K⠇[1G[0K⠏[1G[0K⠋[1G[0K⠙[1G[0K⠹[1G[0K⠸[1G[0K⠼[1G[0K⠴[1G[0K⠦[1G[0K⠧[1G[0K⠇[1G[0K⠏[1G[0K⠋[1G[0K⠙[1G[0K⠹[1G[0K⠸[1G[0K⠼[1G[0K⠴[1G[0K⠦[1G[0K⠧[1G[0K⠇[1G[0K⠏[1G[0K⠋[1G[0K⠙[1G[0K⠹[1G[0K⠸[1G[0K⠼[1G[0K⠴[1G[0K⠦[1G[0K⠧[1G[0K⠇[1G[0K⠏[1G[0K⠋[1G[0K⠙[1G[0K⠹[1G[0K⠸[1G[0K[1mnpm[22m [33mwarn[39m [94mdeprecated[39m transformers@2.1.0: Deprecated, use jstransformer
+[1G[0K⠸[1G[0K[1mnpm[22m [33mwarn[39m [94mdeprecated[39m constantinople@3.0.2: Please update to at least constantinople 3.1.1
+[1G[0K⠸[1G[0K⠼[1G[0K⠴[1G[0K[1mnpm[22m [33mwarn[39m [94mdeprecated[39m jade@1.11.0: Jade has been renamed to pug, please install the latest version of pug instead of jade
+[1G[0K⠴[1G[0K⠦[1G[0K⠧[1G[0K⠇[1G[0K⠏[1G[0K
+added 99 packages, removed 1 package, and audited 100 packages in 4s
+[1G[0K⠏[1G[0K
+[1G[0K⠏[1G[0K1 package is looking for funding
+[1G[0K⠏[1G[0K  run `npm fund` for details
+[1G[0K⠏[1G[0K
+[31m[1m11[22m[39m vulnerabilities (1 [1mlow[22m, 2 [33m[1mmoderate[22m[39m, 5 [31m[1mhigh[22m[39m, 3 [35m[1mcritical[22m[39m)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+[1G[0K⠋[1G[0Ksh-3.2# DEBUG=part12-containers-applications:* npm start
+
+> part12-containers-applications@0.0.0 start
+> node ./bin/www
+
+[1G[0K  [36;1mpart12-containers-applications:server [0mListening on port 3000 [36m+0ms[0m
+^C
+sh-3.2# rm -f index.js
+sh-3.2# docker container --help'[K
+
+Usage:  docker container COMMAND
+
+Manage containers
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  exec        Execute a command in a running container
+  export      Export a container's filesystem as a tar archive
+  inspect     Display detailed information on one or more containers
+  kill        Kill one or more running containers
+  logs        Fetch the logs of a container
+  ls          List containers
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  prune       Remove all stopped containers
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  run         Create and run a new container from an image
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker container COMMAND --help' for more information on a command.
+sh-3.2# docker container rm mushing_chebysev
+Error response from daemon: No such container: mushing_chebysev
+sh-3.2# docker ps -a
+CONTAINER ID   IMAGE              COMMAND                  CREATED          STATUS                      PORTS     NAMES
+043e8ee8cf46   fs-hello-world     "docker-entrypoint.s…"   20 minutes ago   Exited (0) 10 minutes ago             musing_chebyshev
+8fc9db89c077   fs-hello-world     "docker-entrypoint.s…"   24 minutes ago   Exited (0) 24 minutes ago             bold_stonebraker
+a6ab7ddce9bb   node:20            "docker-entrypoint.s…"   32 minutes ago   Exited (0) 32 minutes ago             suspicious_borg
+3d93ba622921   hello-world        "bash"                   19 hours ago     Created                               kind_haslett
+39dbd37c3dfb   hello-world        "bash"                   19 hours ago     Created                               infallible_torvalds
+5841c656f543   node:20            "docker-entrypoint.s…"   19 hours ago     Exited (0) 43 minutes ago             hello-node
+2876534b398d   hello-node-world   "sh"                     19 hours ago     Exited (127) 19 hours ago             stoic_tu
+b5c39f10432c   hello-world        "/hello"                 20 hours ago     Exited (0) 19 hours ago               reverent_chaplygin
+sh-3.2# docker rm musing_chebyshev
+musing_chebyshev
+sh-3.2# docker rm musing_chebyshev[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cps -a[K
+CONTAINER ID   IMAGE              COMMAND                  CREATED          STATUS                      PORTS     NAMES
+8fc9db89c077   fs-hello-world     "docker-entrypoint.s…"   29 minutes ago   Exited (0) 29 minutes ago             bold_stonebraker
+a6ab7ddce9bb   node:20            "docker-entrypoint.s…"   36 minutes ago   Exited (0) 36 minutes ago             suspicious_borg
+3d93ba622921   hello-world        "bash"                   19 hours ago     Created                               kind_haslett
+39dbd37c3dfb   hello-world        "bash"                   19 hours ago     Created                               infallible_torvalds
+5841c656f543   node:20            "docker-entrypoint.s…"   19 hours ago     Exited (0) 48 minutes ago             hello-node
+2876534b398d   hello-node-world   "sh"                     19 hours ago     Exited (127) 19 hours ago             stoic_tu
+b5c39f10432c   hello-world        "/hello"                 20 hours ago     Exited (0) 19 hours ago               reverent_chaplygin
+sh-3.2# docker ps -arm musing_chebyshev[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kbold_stonebraker
+bold_stonebraker
+sh-3.2# docker rm bold_stonebraker[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cps -a[Krm musing_chebyshev[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kdocker ps -acontainer rm mushing_chebysev[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cps -a[K[C[C[C[C[C[C[C[C[Kdocker build -t express-server .
+[1A[1B[0G[?25l[+] Building 0.0s (0/1)                                                                              docker:desktop-linux
+[?25h[1A[0G[?25l[+] Building 0.1s (5/7)                                                                              docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                 0.0s
+[0m[34m => => transferring dockerfile: 115B                                                                                 0.0s
+[0m => WARN: JSONArgsRecommended: JSON arguments recommended for CMD to prevent unintended behavior related to OS sign  0.0s
+[34m => [internal] load metadata for docker.io/library/node:20                                                           0.0s
+[0m[34m => [internal] load .dockerignore                                                                                    0.0s
+[0m[34m => => transferring context: 2B                                                                                      0.0s
+[0m[34m => [1/3] FROM docker.io/library/node:20                                                                             0.0s
+[0m => [internal] load build context                                                                                    0.1s
+ => => transferring context: 3.65MB                                                                                  0.1s
+[34m => CACHED [2/3] WORKDIR /usr/src/app                                                                                0.0s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.3s (7/7)                                                                              docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                 0.0s
+[0m[34m => => transferring dockerfile: 115B                                                                                 0.0s
+[0m => WARN: JSONArgsRecommended: JSON arguments recommended for CMD to prevent unintended behavior related to OS sign  0.0s
+[34m => [internal] load metadata for docker.io/library/node:20                                                           0.0s
+[0m[34m => [internal] load .dockerignore                                                                                    0.0s
+[0m[34m => => transferring context: 2B                                                                                      0.0s
+[0m[34m => [1/3] FROM docker.io/library/node:20                                                                             0.0s
+[0m[34m => [internal] load build context                                                                                    0.2s
+[0m[34m => => transferring context: 8.33MB                                                                                  0.2s
+[0m[34m => CACHED [2/3] WORKDIR /usr/src/app                                                                                0.0s
+[0m[34m => [3/3] COPY . .                                                                                                   0.1s
+[0m[?25h[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[1A[0G[?25l[+] Building 0.4s (8/8) FINISHED                                                                     docker:desktop-linux
+[34m => [internal] load build definition from Dockerfile                                                                 0.0s
+[0m[34m => => transferring dockerfile: 115B                                                                                 0.0s
+[0m => WARN: JSONArgsRecommended: JSON arguments recommended for CMD to prevent unintended behavior related to OS sign  0.0s
+[34m => [internal] load metadata for docker.io/library/node:20                                                           0.0s
+[0m[34m => [internal] load .dockerignore                                                                                    0.0s
+[0m[34m => => transferring context: 2B                                                                                      0.0s
+[0m[34m => [1/3] FROM docker.io/library/node:20                                                                             0.0s
+[0m[34m => [internal] load build context                                                                                    0.2s
+[0m[34m => => transferring context: 8.33MB                                                                                  0.2s
+[0m[34m => CACHED [2/3] WORKDIR /usr/src/app                                                                                0.0s
+[0m[34m => [3/3] COPY . .                                                                                                   0.1s
+[0m[34m => exporting to image                                                                                               0.1s
+[0m[34m => => exporting layers                                                                                              0.1s
+[0m[34m => => writing image sha256:8b940aa4ed465d3033c171eeed3771f13f736cdbf29551847481f7815056e848                         0.0s
+[0m[34m => => naming to docker.io/library/express-server                                                                    0.0s
+[0m[?25h
+ [33m1 warning found (use docker --debug to expand):
+[0m - JSONArgsRecommended: JSON arguments recommended for CMD to prevent unintended behavior related to OS signals (line 7)
+[1m
+What's next:[0m
+    View a summary of image vulnerabilities and recommendations → [36mdocker scout quickview [0m
+sh-3.2# docker run -p 3123:3000 express-server
+
+> part12-containers-applications@0.0.0 start
+> node ./bin/www
+
+[0mGET / [32m200 [0m93.543 ms - 170[0m
+[0mGET /stylesheets/style.css [32m200 [0m3.840 ms - 111[0m
+[0mGET /favicon.ico [33m404 [0m18.601 ms - 942[0m
+sh-3.2# 
