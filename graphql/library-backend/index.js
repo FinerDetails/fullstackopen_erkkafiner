@@ -20,6 +20,14 @@ const User = require("./models/User")
 require("dotenv").config()
 const MONGODB_URI = process.env.MONGODB_URI
 
+const corsOptions = {
+	origin: 'http://localhost:3000',
+	methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+	preflightContinue: false,
+	optionsSuccessStatus: 204,
+	allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
+  };
+
 mongoose.set("strictQuery", false)
 mongoose
 	.connect(MONGODB_URI)
@@ -57,7 +65,7 @@ const start = async () => {
 	await server.start()
 	app.use(
 		"/",
-		cors(),
+		cors(corsOptions),
 		express.json(),
 		expressMiddleware(server, {
 			context: async ({ req }) => {
